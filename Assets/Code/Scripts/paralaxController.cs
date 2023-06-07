@@ -8,7 +8,8 @@ public class paralaxController : MonoBehaviour
     // source: https://www.youtube.com/watch?v=ZYZfKbLxoHI 
     Transform cam;
     Vector3 camStartPos;
-    float distance;
+    float distanceX;
+    float distanceY;
 
     GameObject[] backgrounds;
     Material[] mat;
@@ -61,13 +62,14 @@ public class paralaxController : MonoBehaviour
 
     private void LateUpdate()
     {
-        distance = cam.position.x - camStartPos.x;
-        transform.position = new Vector3(cam.position.x, transform.position.y, 0);
+        distanceX = cam.position.x - camStartPos.x;
+        distanceY = cam.position.y - camStartPos.y;
+        transform.position = new Vector3(cam.position.x, cam.position.y, 0);
                 
         for (int i = 0; i < backgrounds.Length; i++)
         {
             float speed = backSpeed[i] * parallaxSpeed;
-            mat[i].SetTextureOffset("_MainTex", new Vector2(distance, 0) * speed);
+            mat[i].SetTextureOffset("_MainTex", new Vector2(distanceX, distanceY) * speed);
         }
     }
 
