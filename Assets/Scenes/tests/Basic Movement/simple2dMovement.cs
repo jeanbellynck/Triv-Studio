@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class playerMovement : MonoBehaviour
 {
-    public float speed = 20f;
+    public float speed = 5f;
     private Vector2 motion;
 
     // Update is called once per frame
