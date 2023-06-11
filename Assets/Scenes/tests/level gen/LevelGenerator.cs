@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class LevelGenerator : MonoBehaviour
 {
-    [SerializeField] private Transform LVLStart;
-    [SerializeField] private List<Transform> LevelParts;
+    [SerializeField] private GameObject LVLStart;
+    [SerializeField] private List<GameObject> LevelParts;
     [SerializeField] private GameObject player;
 
 
@@ -16,13 +16,13 @@ public class LevelGenerator : MonoBehaviour
     private void Awake()
     {
 
-        lastEndPosition = LVLStart.Find("EndPosition").position;
+        lastEndPosition = LVLStart.transform.Find("EndPosition").position;
 
     }
 
     private void Update()
     {
-        if(Vector3.Distance(player.transform.position, lastEndPosition) < spawnDistance)
+        if(Mathf.Abs(player.transform.position.x - lastEndPosition.x) < spawnDistance)
         {
             //Spawn a level part
             SpawnLevelPart();
@@ -31,14 +31,14 @@ public class LevelGenerator : MonoBehaviour
 
     private void SpawnLevelPart()
     {
-        Transform chosenLeveLPart = LevelParts[Random.Range(0, LevelParts.Count)];
-        Transform lastLevelTransform = SpawnLevelPart(lastEndPosition, chosenLeveLPart);
-        lastEndPosition = lastLevelTransform.Find("EndPosition").position;
+        GameObject chosenLeveLPart = LevelParts[Random.Range(0, LevelParts.Count)];
+        GameObject lastLevel = SpawnLevelPart(lastEndPosition, chosenLeveLPart);
+        lastEndPosition = lastLevel.transform.Find("EndPosition").position;
     }
 
-    private Transform SpawnLevelPart(Vector3 spawnPosition, Transform levelPart)
+    private GameObject SpawnLevelPart(Vector3 spawnPosition, GameObject levelPart)
     {
-        Transform levelPartTransform = Instantiate(levelPart, spawnPosition, Quaternion.identity);
-        return levelPartTransform;  
+        GameObject newLevelPart = Instantiate(levelPart, spawnPosition, Quaternion.identity);
+        return newLevelPart;  
     }
 }
