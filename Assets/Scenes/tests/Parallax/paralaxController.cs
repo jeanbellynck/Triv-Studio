@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class paralaxController : MonoBehaviour
 {
+   
+
+
 
     // source: https://www.youtube.com/watch?v=ZYZfKbLxoHI 
     Transform cam;
