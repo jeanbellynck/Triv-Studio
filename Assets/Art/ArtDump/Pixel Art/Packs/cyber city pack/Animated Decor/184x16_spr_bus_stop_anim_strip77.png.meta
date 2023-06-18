@@ -1,0 +1,1821 @@
+fileFormatVersion: 2
+guid: 6ecc1e4bb3e12d548ba8dc66f787bcc7
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 16384
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: 184x16_spr_bus_stop_anim_strip77_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 184
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: da4eee13e5abb35478fb057e0e866d15
+      internalID: -866455844
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 184x16_spr_bus_stop_anim_strip77_1
+      rect:
+        serializedVersion: 2
+        x: 184
+        y: 0
+        width: 184
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8ac70017b0d5ae842b6861b71cadb1be
+      internalID: -1743164464
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 184x16_spr_bus_stop_anim_strip77_2
+      rect:
+        serializedVersion: 2
+        x: 368
+        y: 0
+        width: 184
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 10277dfd2ebf6f241951124a6f0297c9
+      internalID: 981019132
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 184x16_spr_bus_stop_anim_strip77_3
+      rect:
+        serializedVersion: 2
+        x: 552
+        y: 0
+        width: 184
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 557c607651345f04099b4ae960723a99
+      internalID: -397369582
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 184x16_spr_bus_stop_anim_strip77_4
+      rect:
+        serializedVersion: 2
+        x: 736
+        y: 0
+        width: 184
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7ac9ab7584657544ea92b54c1bdc95d1
+      internalID: -1415183916
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 184x16_spr_bus_stop_anim_strip77_5
+      rect:
+        serializedVersion: 2
+        x: 920
+        y: 0
+        width: 184
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9d4c2ce47e859c046b59dbe1ad8a2bfe
+      internalID: -1705329914
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 184x16_spr_bus_stop_anim_strip77_6
+      rect:
+        serializedVersion: 2
+        x: 1104
+        y: 0
+        width: 184
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f40b85a42c034bb489026040cde500a1
+      internalID: 1325809421
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 184x16_spr_bus_stop_anim_strip77_7
+      rect:
+        serializedVersion: 2
+        x: 1288
+        y: 0
+        width: 184
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 980e0a936ac9c30478159a97ef4edf12
+      internalID: 1141895694
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 184x16_spr_bus_stop_anim_strip77_8
+      rect:
+        serializedVersion: 2
+        x: 1472
+        y: 0
+        width: 184
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b0e5908c31ed5044695200f1d1eddc86
+      internalID: 1022859951
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 184x16_spr_bus_stop_anim_strip77_9
+      rect:
+        serializedVersion: 2
+        x: 1656
+        y: 0
+        width: 184
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 041158ae10b0dcb4a90d7b3527b6af7c
+      internalID: -1391663463
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 184x16_spr_bus_stop_anim_strip77_10
+      rect:
+        serializedVersion: 2
+        x: 1840
+        y: 0
+        width: 184
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8f837656f3e9907458347bf2528af43a
+      internalID: 1731318339
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 184x16_spr_bus_stop_anim_strip77_11
+      rect:
+        serializedVersion: 2
+        x: 2024
+        y: 0
+        width: 184
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bbbe73d0badcd7044a6b7c844ebb6d30
+      internalID: -1759166588
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 184x16_spr_bus_stop_anim_strip77_12
+      rect:
+        serializedVersion: 2
+        x: 2208
+        y: 0
+        width: 184
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 272e44e880bcbd745a3bfe5d2102686d
+      internalID: 1864058593
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 184x16_spr_bus_stop_anim_strip77_13
+      rect:
+        serializedVersion: 2
+        x: 2392
+        y: 0
+        width: 184
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1e0d67a9e9d39df4c8ca0618c2f25693
+      internalID: -672926285
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 184x16_spr_bus_stop_anim_strip77_14
+      rect:
+        serializedVersion: 2
+        x: 2576
+        y: 0
+        width: 184
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0c3433a358f93a74a964983bb23b2ac3
+      internalID: -167998604
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 184x16_spr_bus_stop_anim_strip77_15
+      rect:
+        serializedVersion: 2
+        x: 2760
+        y: 0
+        width: 184
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 22922edcd51da6d4a957e2eae739ec66
+      internalID: 134937555
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 184x16_spr_bus_stop_anim_strip77_16
+      rect:
+        serializedVersion: 2
+        x: 2944
+        y: 0
+        width: 184
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 51abd691058eb3b418edb98117f96f9e
+      internalID: -32113619
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 184x16_spr_bus_stop_anim_strip77_17
+      rect:
+        serializedVersion: 2
+        x: 3128
+        y: 0
+        width: 184
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a6bb198134a64654cbcb7a318b423b8f
+      internalID: 2050162789
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 184x16_spr_bus_stop_anim_strip77_18
+      rect:
+        serializedVersion: 2
+        x: 3312
+        y: 0
+        width: 184
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eec9057fd4f4f9f4ba9611706e3aa281
+      internalID: 819871426
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 184x16_spr_bus_stop_anim_strip77_19
+      rect:
+        serializedVersion: 2
+        x: 3496
+        y: 0
+        width: 184
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1a32de1e24a80744888849ed5dc5c8c7
+      internalID: -678489478
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 184x16_spr_bus_stop_anim_strip77_20
+      rect:
+        serializedVersion: 2
+        x: 3680
+        y: 0
+        width: 184
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bd11bb714d2af8c47abb6db952420d42
+      internalID: -1921798931
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 184x16_spr_bus_stop_anim_strip77_21
+      rect:
+        serializedVersion: 2
+        x: 3864
+        y: 0
+        width: 184
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0b4466e69fdcfa340b43c3ff4469909f
+      internalID: 591331141
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 184x16_spr_bus_stop_anim_strip77_22
+      rect:
+        serializedVersion: 2
+        x: 4048
+        y: 0
+        width: 184
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ffd1f153dd116c44c9bc566cde65a6f0
+      internalID: 575837487
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 184x16_spr_bus_stop_anim_strip77_23
+      rect:
+        serializedVersion: 2
+        x: 4232
+        y: 0
+        width: 184
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eadb22705c7047d43a50fc06a88d56fe
+      internalID: -805956786
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 184x16_spr_bus_stop_anim_strip77_24
+      rect:
+        serializedVersion: 2
+        x: 4416
+        y: 0
+        width: 184
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8a49cb65b79af5d4aaeb337157fcd437
+      internalID: -504533076
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 184x16_spr_bus_stop_anim_strip77_25
+      rect:
+        serializedVersion: 2
+        x: 4600
+        y: 0
+        width: 184
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 73d47c33b8a6d074db32b4f4ab95f43a
+      internalID: -995856797
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 184x16_spr_bus_stop_anim_strip77_26
+      rect:
+        serializedVersion: 2
+        x: 4784
+        y: 0
+        width: 184
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: be34a084d91baa649afdcaca7407bf07
+      internalID: -114047424
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 184x16_spr_bus_stop_anim_strip77_27
+      rect:
+        serializedVersion: 2
+        x: 4968
+        y: 0
+        width: 184
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e2d686a956c821b4eb5af52ffa0e4261
+      internalID: -1021006662
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 184x16_spr_bus_stop_anim_strip77_28
+      rect:
+        serializedVersion: 2
+        x: 5152
+        y: 0
+        width: 184
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 67d0b4eee054562459b42684e3daec2e
+      internalID: 571442655
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 184x16_spr_bus_stop_anim_strip77_29
+      rect:
+        serializedVersion: 2
+        x: 5336
+        y: 0
+        width: 184
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 488e176bd1d21934788657decd92641d
+      internalID: 2001477814
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 184x16_spr_bus_stop_anim_strip77_30
+      rect:
+        serializedVersion: 2
+        x: 5520
+        y: 0
+        width: 184
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 934750cbbc5e2924c9443a0927d82dfe
+      internalID: 1962794416
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 184x16_spr_bus_stop_anim_strip77_31
+      rect:
+        serializedVersion: 2
+        x: 5704
+        y: 0
+        width: 184
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 05acce1ad995391459e53c52c9bcaaa4
+      internalID: -499619952
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 184x16_spr_bus_stop_anim_strip77_32
+      rect:
+        serializedVersion: 2
+        x: 5888
+        y: 0
+        width: 184
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 01b495bc0ffd3e04f89b3df9e3d3646f
+      internalID: -99580451
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 184x16_spr_bus_stop_anim_strip77_33
+      rect:
+        serializedVersion: 2
+        x: 6072
+        y: 0
+        width: 184
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f658ede66e2a8dd4289f8be84e4702e5
+      internalID: 448403779
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 184x16_spr_bus_stop_anim_strip77_34
+      rect:
+        serializedVersion: 2
+        x: 6256
+        y: 0
+        width: 184
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 50a028c16ff7bb3478b65cbf44d2ac80
+      internalID: 1418901784
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 184x16_spr_bus_stop_anim_strip77_35
+      rect:
+        serializedVersion: 2
+        x: 6440
+        y: 0
+        width: 184
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f2da8d8735b14dc4ba7f0da0c73f8aa6
+      internalID: 2089180515
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 184x16_spr_bus_stop_anim_strip77_36
+      rect:
+        serializedVersion: 2
+        x: 6624
+        y: 0
+        width: 184
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 65f37fbed50a1d94fbe434e5267633cf
+      internalID: -483915686
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 184x16_spr_bus_stop_anim_strip77_37
+      rect:
+        serializedVersion: 2
+        x: 6808
+        y: 0
+        width: 184
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9e6c6a6cfda510f41afd6fa8cc2a309f
+      internalID: 1856019979
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 184x16_spr_bus_stop_anim_strip77_38
+      rect:
+        serializedVersion: 2
+        x: 6992
+        y: 0
+        width: 184
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a4a5f2fdee643ed4d85b42dde2212ebc
+      internalID: -78392493
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 184x16_spr_bus_stop_anim_strip77_39
+      rect:
+        serializedVersion: 2
+        x: 7176
+        y: 0
+        width: 184
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 28b4cab0e18e90b428b5afbc53bce6d5
+      internalID: 472876427
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 184x16_spr_bus_stop_anim_strip77_40
+      rect:
+        serializedVersion: 2
+        x: 7360
+        y: 0
+        width: 184
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a55c1e96ba4a9494fa07319999a773b5
+      internalID: -2044005413
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 184x16_spr_bus_stop_anim_strip77_41
+      rect:
+        serializedVersion: 2
+        x: 7544
+        y: 0
+        width: 184
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 67e8593675e1f174193ce7638a6dc883
+      internalID: -1677978340
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 184x16_spr_bus_stop_anim_strip77_42
+      rect:
+        serializedVersion: 2
+        x: 7728
+        y: 0
+        width: 184
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fe44b0fa72edca74ab8d2f74847307da
+      internalID: -685615362
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 184x16_spr_bus_stop_anim_strip77_43
+      rect:
+        serializedVersion: 2
+        x: 7912
+        y: 0
+        width: 184
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bbf4764e8858b3346ae4240081c31856
+      internalID: -1492236079
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 184x16_spr_bus_stop_anim_strip77_44
+      rect:
+        serializedVersion: 2
+        x: 8096
+        y: 0
+        width: 184
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 37b5ee9b39a8dab4d910a7b0e64bafcf
+      internalID: 1750831547
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 184x16_spr_bus_stop_anim_strip77_45
+      rect:
+        serializedVersion: 2
+        x: 8280
+        y: 0
+        width: 184
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8205483164cc5434187c823d3c863b26
+      internalID: 443638088
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 184x16_spr_bus_stop_anim_strip77_46
+      rect:
+        serializedVersion: 2
+        x: 8464
+        y: 0
+        width: 184
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: df53160affbf8b14aa7b3b84365aa777
+      internalID: -1850634601
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 184x16_spr_bus_stop_anim_strip77_47
+      rect:
+        serializedVersion: 2
+        x: 8648
+        y: 0
+        width: 184
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 24ea424b75e9e3e489a3446b8b21a230
+      internalID: 454157509
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 184x16_spr_bus_stop_anim_strip77_48
+      rect:
+        serializedVersion: 2
+        x: 8832
+        y: 0
+        width: 184
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aca4fa5222aee5b4c8bec4f2be31baab
+      internalID: -390731113
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 184x16_spr_bus_stop_anim_strip77_49
+      rect:
+        serializedVersion: 2
+        x: 9016
+        y: 0
+        width: 184
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 27ae3b0ee1cac2b409343daa1a6b6176
+      internalID: -1488126491
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 184x16_spr_bus_stop_anim_strip77_50
+      rect:
+        serializedVersion: 2
+        x: 9200
+        y: 0
+        width: 184
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2c9ad2098bcb6f244bf6c658055dd8d7
+      internalID: 398778022
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 184x16_spr_bus_stop_anim_strip77_51
+      rect:
+        serializedVersion: 2
+        x: 9384
+        y: 0
+        width: 184
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c0ef95ca7874b97449133aaab596c1d3
+      internalID: -1964567532
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 184x16_spr_bus_stop_anim_strip77_52
+      rect:
+        serializedVersion: 2
+        x: 9568
+        y: 0
+        width: 184
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 261b071ba3906924abb43e8615eabde3
+      internalID: -1563149213
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 184x16_spr_bus_stop_anim_strip77_53
+      rect:
+        serializedVersion: 2
+        x: 9752
+        y: 0
+        width: 184
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b9f8474f0d7e6e74fa9a9cd1fd819885
+      internalID: -883910749
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 184x16_spr_bus_stop_anim_strip77_54
+      rect:
+        serializedVersion: 2
+        x: 9936
+        y: 0
+        width: 184
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fef0633cedda87f469415b1fec8f38b1
+      internalID: -1494877363
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 184x16_spr_bus_stop_anim_strip77_55
+      rect:
+        serializedVersion: 2
+        x: 10120
+        y: 0
+        width: 184
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 22792795130559a44aa9dd3648a9d73a
+      internalID: 2063816747
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 184x16_spr_bus_stop_anim_strip77_56
+      rect:
+        serializedVersion: 2
+        x: 10304
+        y: 0
+        width: 184
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d0ac0aec5f8c4604192c60aefc49e2d7
+      internalID: 541982422
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 184x16_spr_bus_stop_anim_strip77_57
+      rect:
+        serializedVersion: 2
+        x: 10488
+        y: 0
+        width: 184
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1e7d6149f554d72438604f68b6d54e5d
+      internalID: 1876427038
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 184x16_spr_bus_stop_anim_strip77_58
+      rect:
+        serializedVersion: 2
+        x: 10672
+        y: 0
+        width: 184
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: da62420337fb92844be4d6b714ab15a4
+      internalID: -91043121
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 184x16_spr_bus_stop_anim_strip77_59
+      rect:
+        serializedVersion: 2
+        x: 10856
+        y: 0
+        width: 184
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 233f503c659a69e4a94c0383533beccc
+      internalID: 882425611
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 184x16_spr_bus_stop_anim_strip77_60
+      rect:
+        serializedVersion: 2
+        x: 11040
+        y: 0
+        width: 184
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5df953b162c7e974cbc0d74199300bd9
+      internalID: -1105974830
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 184x16_spr_bus_stop_anim_strip77_61
+      rect:
+        serializedVersion: 2
+        x: 11224
+        y: 0
+        width: 184
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d17685e3fde22b2419a70eafced5c1bd
+      internalID: -362575841
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 184x16_spr_bus_stop_anim_strip77_62
+      rect:
+        serializedVersion: 2
+        x: 11408
+        y: 0
+        width: 184
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 93a7d16ba1e182744be9cab08deb8346
+      internalID: 850719427
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 184x16_spr_bus_stop_anim_strip77_63
+      rect:
+        serializedVersion: 2
+        x: 11592
+        y: 0
+        width: 184
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3adb220e69adba345a5781366ebdeb81
+      internalID: 1557830718
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 184x16_spr_bus_stop_anim_strip77_64
+      rect:
+        serializedVersion: 2
+        x: 11776
+        y: 0
+        width: 184
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a763e29a8d9e590428c58b3ca7496800
+      internalID: 1907353754
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 184x16_spr_bus_stop_anim_strip77_65
+      rect:
+        serializedVersion: 2
+        x: 11960
+        y: 0
+        width: 184
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d82821fcd8165ef449eed177f4213d79
+      internalID: 1032340239
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 184x16_spr_bus_stop_anim_strip77_66
+      rect:
+        serializedVersion: 2
+        x: 12144
+        y: 0
+        width: 184
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3a6582e2e2d84d44f8b26cb58dcb6746
+      internalID: 856455626
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 184x16_spr_bus_stop_anim_strip77_67
+      rect:
+        serializedVersion: 2
+        x: 12328
+        y: 0
+        width: 184
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5598747b09a8141438699e98db2b918a
+      internalID: -1498783157
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 184x16_spr_bus_stop_anim_strip77_68
+      rect:
+        serializedVersion: 2
+        x: 12512
+        y: 0
+        width: 184
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bc9d2a449817fdb4ab060c549d8979b7
+      internalID: -131632515
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 184x16_spr_bus_stop_anim_strip77_69
+      rect:
+        serializedVersion: 2
+        x: 12696
+        y: 0
+        width: 184
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8364b3f209426df489ceb12700741a0c
+      internalID: -1501038992
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 184x16_spr_bus_stop_anim_strip77_70
+      rect:
+        serializedVersion: 2
+        x: 12880
+        y: 0
+        width: 184
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 74ec1dbe6f9a6b6468559295ddde5903
+      internalID: -1616630370
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 184x16_spr_bus_stop_anim_strip77_71
+      rect:
+        serializedVersion: 2
+        x: 13064
+        y: 0
+        width: 184
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 63e93b826aa58764f9d9b3ed725c1ea2
+      internalID: -1747690788
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 184x16_spr_bus_stop_anim_strip77_72
+      rect:
+        serializedVersion: 2
+        x: 13248
+        y: 0
+        width: 184
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d036f4f323e575a47831d310c7059758
+      internalID: -1958658812
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 184x16_spr_bus_stop_anim_strip77_73
+      rect:
+        serializedVersion: 2
+        x: 13432
+        y: 0
+        width: 184
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fb981b12ad78ff54a87add2046457753
+      internalID: 670601655
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 184x16_spr_bus_stop_anim_strip77_74
+      rect:
+        serializedVersion: 2
+        x: 13616
+        y: 0
+        width: 184
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d1513dcccbce0c6499bff00886347231
+      internalID: -2101313072
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 184x16_spr_bus_stop_anim_strip77_75
+      rect:
+        serializedVersion: 2
+        x: 13800
+        y: 0
+        width: 184
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 651a4d5e5a8f0504dbe10476c2eb3d1a
+      internalID: 1358098614
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 184x16_spr_bus_stop_anim_strip77_76
+      rect:
+        serializedVersion: 2
+        x: 13984
+        y: 0
+        width: 184
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4cd50021daf3e3949a4688471e49a629
+      internalID: 1082127197
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      184x16_spr_bus_stop_anim_strip77_0: -866455844
+      184x16_spr_bus_stop_anim_strip77_1: -1743164464
+      184x16_spr_bus_stop_anim_strip77_10: 1731318339
+      184x16_spr_bus_stop_anim_strip77_11: -1759166588
+      184x16_spr_bus_stop_anim_strip77_12: 1864058593
+      184x16_spr_bus_stop_anim_strip77_13: -672926285
+      184x16_spr_bus_stop_anim_strip77_14: -167998604
+      184x16_spr_bus_stop_anim_strip77_15: 134937555
+      184x16_spr_bus_stop_anim_strip77_16: -32113619
+      184x16_spr_bus_stop_anim_strip77_17: 2050162789
+      184x16_spr_bus_stop_anim_strip77_18: 819871426
+      184x16_spr_bus_stop_anim_strip77_19: -678489478
+      184x16_spr_bus_stop_anim_strip77_2: 981019132
+      184x16_spr_bus_stop_anim_strip77_20: -1921798931
+      184x16_spr_bus_stop_anim_strip77_21: 591331141
+      184x16_spr_bus_stop_anim_strip77_22: 575837487
+      184x16_spr_bus_stop_anim_strip77_23: -805956786
+      184x16_spr_bus_stop_anim_strip77_24: -504533076
+      184x16_spr_bus_stop_anim_strip77_25: -995856797
+      184x16_spr_bus_stop_anim_strip77_26: -114047424
+      184x16_spr_bus_stop_anim_strip77_27: -1021006662
+      184x16_spr_bus_stop_anim_strip77_28: 571442655
+      184x16_spr_bus_stop_anim_strip77_29: 2001477814
+      184x16_spr_bus_stop_anim_strip77_3: -397369582
+      184x16_spr_bus_stop_anim_strip77_30: 1962794416
+      184x16_spr_bus_stop_anim_strip77_31: -499619952
+      184x16_spr_bus_stop_anim_strip77_32: -99580451
+      184x16_spr_bus_stop_anim_strip77_33: 448403779
+      184x16_spr_bus_stop_anim_strip77_34: 1418901784
+      184x16_spr_bus_stop_anim_strip77_35: 2089180515
+      184x16_spr_bus_stop_anim_strip77_36: -483915686
+      184x16_spr_bus_stop_anim_strip77_37: 1856019979
+      184x16_spr_bus_stop_anim_strip77_38: -78392493
+      184x16_spr_bus_stop_anim_strip77_39: 472876427
+      184x16_spr_bus_stop_anim_strip77_4: -1415183916
+      184x16_spr_bus_stop_anim_strip77_40: -2044005413
+      184x16_spr_bus_stop_anim_strip77_41: -1677978340
+      184x16_spr_bus_stop_anim_strip77_42: -685615362
+      184x16_spr_bus_stop_anim_strip77_43: -1492236079
+      184x16_spr_bus_stop_anim_strip77_44: 1750831547
+      184x16_spr_bus_stop_anim_strip77_45: 443638088
+      184x16_spr_bus_stop_anim_strip77_46: -1850634601
+      184x16_spr_bus_stop_anim_strip77_47: 454157509
+      184x16_spr_bus_stop_anim_strip77_48: -390731113
+      184x16_spr_bus_stop_anim_strip77_49: -1488126491
+      184x16_spr_bus_stop_anim_strip77_5: -1705329914
+      184x16_spr_bus_stop_anim_strip77_50: 398778022
+      184x16_spr_bus_stop_anim_strip77_51: -1964567532
+      184x16_spr_bus_stop_anim_strip77_52: -1563149213
+      184x16_spr_bus_stop_anim_strip77_53: -883910749
+      184x16_spr_bus_stop_anim_strip77_54: -1494877363
+      184x16_spr_bus_stop_anim_strip77_55: 2063816747
+      184x16_spr_bus_stop_anim_strip77_56: 541982422
+      184x16_spr_bus_stop_anim_strip77_57: 1876427038
+      184x16_spr_bus_stop_anim_strip77_58: -91043121
+      184x16_spr_bus_stop_anim_strip77_59: 882425611
+      184x16_spr_bus_stop_anim_strip77_6: 1325809421
+      184x16_spr_bus_stop_anim_strip77_60: -1105974830
+      184x16_spr_bus_stop_anim_strip77_61: -362575841
+      184x16_spr_bus_stop_anim_strip77_62: 850719427
+      184x16_spr_bus_stop_anim_strip77_63: 1557830718
+      184x16_spr_bus_stop_anim_strip77_64: 1907353754
+      184x16_spr_bus_stop_anim_strip77_65: 1032340239
+      184x16_spr_bus_stop_anim_strip77_66: 856455626
+      184x16_spr_bus_stop_anim_strip77_67: -1498783157
+      184x16_spr_bus_stop_anim_strip77_68: -131632515
+      184x16_spr_bus_stop_anim_strip77_69: -1501038992
+      184x16_spr_bus_stop_anim_strip77_7: 1141895694
+      184x16_spr_bus_stop_anim_strip77_70: -1616630370
+      184x16_spr_bus_stop_anim_strip77_71: -1747690788
+      184x16_spr_bus_stop_anim_strip77_72: -1958658812
+      184x16_spr_bus_stop_anim_strip77_73: 670601655
+      184x16_spr_bus_stop_anim_strip77_74: -2101313072
+      184x16_spr_bus_stop_anim_strip77_75: 1358098614
+      184x16_spr_bus_stop_anim_strip77_76: 1082127197
+      184x16_spr_bus_stop_anim_strip77_8: 1022859951
+      184x16_spr_bus_stop_anim_strip77_9: -1391663463
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
