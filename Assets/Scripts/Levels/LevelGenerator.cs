@@ -6,6 +6,9 @@ using Random = UnityEngine.Random;
 
 namespace Levels
 {
+    /// <summary>
+    /// Generates a level with random level segments.
+    /// </summary>
     public sealed class LevelGenerator : MonoBehaviour
     {
         [SerializeField] 
@@ -17,6 +20,9 @@ namespace Levels
 
         [SerializeField] 
         private GameObject _startSegment;
+        
+        [SerializeField]
+        private Transform _startSegmentPosition;
 
         [SerializeField] 
         private GameObject _endSegment;
@@ -41,7 +47,8 @@ namespace Levels
                 throw new InvalidOperationException("No segments are present.");
             }
 
-            _lastSpawnPosition = _startSegment.transform.position;
+            _lastSpawnPosition = _startSegmentPosition.position;
+            Instantiate(_startSegment, _lastSpawnPosition, Quaternion.identity);
             _halfCameraWidth = Camera.main.GetDimensions().Width / 2;
         }
         
@@ -79,12 +86,6 @@ namespace Levels
             _lastSpawnPosition += new Vector3(_segmentWidth + _segmentXOffset, 0, 0);
             var index = Random.Range(0, _segments.Count);
             var segment = _segments[index];
-
-            if (segment == null)
-            {
-                // Todo: reference can be null if game object gets destroyed in DestroySegment script (fix it)
-            }
-
             Instantiate(segment, _lastSpawnPosition, Quaternion.identity);
         }
     }
