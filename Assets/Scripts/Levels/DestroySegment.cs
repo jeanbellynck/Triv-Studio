@@ -3,9 +3,13 @@ using UnityEngine;
 
 namespace Levels
 {
+    /// <summary>
+    /// Destroys a level segment if it gets out of view with regards to the left camera border.
+    /// </summary>
     public sealed class DestroySegment : MonoBehaviour
     {
-        [SerializeField] private float _segmentWidth;
+        [SerializeField] 
+        private float _segmentWidth;
 
         private float _halfCameraWidth;
         private bool _destroyed;
