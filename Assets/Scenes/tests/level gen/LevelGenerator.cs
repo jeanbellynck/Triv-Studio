@@ -1,44 +1,101 @@
-using System.Collections;
+using System;
 using System.Collections.Generic;
+using Extensions;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
-public class LevelGenerator : MonoBehaviour
+namespace Levels
 {
-    [SerializeField] private GameObject LVLStart;
-    [SerializeField] private List<GameObject> LevelParts;
-    [SerializeField] private GameObject player;
-
-
-    public float spawnDistance = 5f;
-
-    private Vector3 lastEndPosition;
-
-    private void Awake()
+    /// <summary>
+    /// Generates a level with random level segments.
+    /// </summary>
+    public sealed class LevelGeneratorv1 : MonoBehaviour
     {
+        [SerializeField]
+        private GameObject _player;
 
-        lastEndPosition = LVLStart.transform.Find("EndPosition").position;
+        [SerializeField, Range(0, 500)]
+        [Tooltip("Stops spawning random segments after the player has traveled a given distance")]
+        private float _playerDistance;
 
-    }
+        [SerializeField]
+        private GameObject _startSegment;
 
-    private void Update()
-    {
-        if(Mathf.Abs(player.transform.position.x - lastEndPosition.x) < spawnDistance)
+        [SerializeField]
+        private Transform _startSegmentPosition;
+
+        [SerializeField]
+        private GameObject _endSegment;
+
+        [Tooltip("List of segments that get randomly spawned")]
+        [SerializeField]
+        private List<GameObject> _segments = new();
+
+        public float _renderDistance = 0;
+
+
+        private Vector3 _lastSpawnPosition;
+        private Vector3 _lastEndPosition;
+        private GameObject _currentSegment;
+        private GameObject _nextSegment;
+        private float _halfCameraWidth;
+
+        private void Awake()
         {
-            //Spawn a level part
-            SpawnLevelPart();
+            if (_segments.Count == 0)
+            {
+                throw new InvalidOperationException("No segments are present.");
+            }
+
+            _currentSegment = Instantiate(_startSegment, _startSegmentPosition.position, Quaternion.identity);
+
+
+            _nextSegment = _segments[Random.Range(0, _segments.Count)];
+            _halfCameraWidth = Camera.main.GetDimensions().Width / 2;
         }
-    }
 
-    private void SpawnLevelPart()
-    {
-        GameObject chosenLeveLPart = LevelParts[Random.Range(0, LevelParts.Count)];
-        GameObject lastLevel = SpawnLevelPart(lastEndPosition, chosenLeveLPart);
-        lastEndPosition = lastLevel.transform.Find("EndPosition").position;
-    }
+        private void Start()
+        {
+            _lastSpawnPosition = _currentSegment.transform.position;
+            _lastEndPosition = _currentSegment.transform.Find("EndPosition").position;
 
-    private GameObject SpawnLevelPart(Vector3 spawnPosition, GameObject levelPart)
-    {
-        GameObject newLevelPart = Instantiate(levelPart, spawnPosition, Quaternion.identity);
-        return newLevelPart;  
+            InitializeSegments();
+        }
+
+        private void Update()
+        {
+            if (CanSpawnSegment())
+            {
+                SpawnSegment();
+            }
+        }
+
+        private void InitializeSegments()
+        {
+
+
+            SpawnSegment();
+
+        }
+
+        private bool CanSpawnSegment()
+        {
+            var xCam = Camera.main.transform.position.x + _halfCameraWidth;
+            var xEnd = _lastEndPosition.x;
+
+            var calc = (xEnd - _renderDistance) < xCam;
+            return calc;
+        }
+
+        private void SpawnSegment()
+        {
+
+            _currentSegment = Instantiate(_nextSegment, _lastEndPosition, Quaternion.identity);
+
+            //update fields
+            _lastSpawnPosition = _currentSegment.transform.position;
+            _lastEndPosition = _currentSegment.transform.Find("EndPosition").position;
+            _nextSegment = _segments[Random.Range(0, _segments.Count)];
+        }
     }
 }
