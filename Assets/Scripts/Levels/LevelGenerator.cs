@@ -21,7 +21,7 @@ namespace Levels
         private GameObject _startSegment;
         
         [SerializeField]
-        private Transform _startSegmentPosition;
+        private Vector3 _startSegmentPosition;
 
         [SerializeField] 
         private GameObject _endSegment;
@@ -42,8 +42,7 @@ namespace Levels
 
         private void Awake()
         {
-            _lastSpawnPosition = _startSegmentPosition.position;
-            Instantiate(_startSegment, _lastSpawnPosition, Quaternion.identity);
+            _lastSpawnPosition = _startSegmentPosition;
             _halfCameraWidth = Camera.main.GetDimensions().Width / 2;
         }
         
@@ -77,6 +76,8 @@ namespace Levels
 
         private void InitializeSegments()
         {
+            Instantiate(_startSegment, _lastSpawnPosition, Quaternion.identity);
+
             while (_lastSpawnPosition.x <= _halfCameraWidth)
             {
                SpawnRandomSegment();
