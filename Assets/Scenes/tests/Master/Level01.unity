@@ -2464,6 +2464,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 20
+  isGrounded: 1
   rb: {fileID: 1019804728}
   groundCheck: {fileID: 1411885102}
   groundLayer:
@@ -2529,7 +2530,7 @@ CapsuleCollider2D:
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: -0.15, y: 0}
-  m_Size: {x: 0.72, y: 1.76}
+  m_Size: {x: 1.81, y: 3.3}
   m_Direction: 0
 --- !u!114 &1019804730
 MonoBehaviour:
