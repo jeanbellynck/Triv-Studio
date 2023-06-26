@@ -1,4 +1,3 @@
-using System;
 using System.Collections.Generic;
 using Extensions;
 using UnityEngine;
@@ -22,7 +21,7 @@ namespace Levels
         private GameObject _startSegment;
         
         [SerializeField]
-        private Transform _startSegmentPosition;
+        private Vector3 _startSegmentPosition;
 
         [SerializeField] 
         private GameObject _endSegment;
@@ -39,16 +38,11 @@ namespace Levels
 
         private Vector3 _lastSpawnPosition;
         private float _halfCameraWidth;
+        private bool _endSegmentSpawned;
 
         private void Awake()
         {
-            if (_segments.Count == 0)
-            {
-                throw new InvalidOperationException("No segments are present.");
-            }
-
-            _lastSpawnPosition = _startSegmentPosition.position;
-            Instantiate(_startSegment, _lastSpawnPosition, Quaternion.identity);
+            _lastSpawnPosition = _startSegmentPosition;
             _halfCameraWidth = Camera.main.GetDimensions().Width / 2;
         }
         
@@ -59,21 +53,38 @@ namespace Levels
         
         private void Update()
         {
-            if (CanSpawnSegment())
+            if (_endSegmentSpawned)
             {
-                SpawnSegment();
+                return;
+            }
+
+            var distance = _player.GetComponent<playerMovement>().Distance;
+            
+            if (distance > _playerDistance || _segments.Count == 0)
+            {
+                SpawnSegment(_endSegment);
+                _endSegmentSpawned = true;
+
+                return;
+            }
+
+            if (CanSpawnRandomSegment())
+            {
+                SpawnRandomSegment();
             }
         }
 
         private void InitializeSegments()
         {
+            Instantiate(_startSegment, _lastSpawnPosition, Quaternion.identity);
+
             while (_lastSpawnPosition.x <= _halfCameraWidth)
             {
-               SpawnSegment();
+               SpawnRandomSegment();
             }
         }
 
-        private bool CanSpawnSegment()
+        private bool CanSpawnRandomSegment()
         {
             var x1 = Camera.main.transform.position.x + _halfCameraWidth;
             var x2 = _lastSpawnPosition.x;
@@ -81,11 +92,16 @@ namespace Levels
             return Mathf.Abs(x2 - x1) < _segmentWidth;
         }
 
-        private void SpawnSegment()
+        private void SpawnRandomSegment()
         {
-            _lastSpawnPosition += new Vector3(_segmentWidth + _segmentXOffset, 0, 0);
             var index = Random.Range(0, _segments.Count);
             var segment = _segments[index];
+            SpawnSegment(segment);
+        }
+
+        private void SpawnSegment(GameObject segment)
+        {
+            _lastSpawnPosition += new Vector3(_segmentWidth + _segmentXOffset, 0, 0);
             Instantiate(segment, _lastSpawnPosition, Quaternion.identity);
         }
     }
