@@ -11,9 +11,9 @@ GameObject:
   - component: {fileID: 8343214173138773155}
   - component: {fileID: 4186949664727859913}
   - component: {fileID: 6419719734169521052}
-  - component: {fileID: 4544293289641067055}
+  - component: {fileID: 2882869957475141969}
   m_Layer: 0
-  m_Name: Striker
+  m_Name: Striker_amin
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -72,8 +72,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -765002847
+  m_SortingLayer: 1
   m_SortingOrder: 0
   m_Sprite: {fileID: 1631149868, guid: 16f53e78cbcf9f040b5dd8ba85201407, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -107,7 +107,7 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!114 &4544293289641067055
+--- !u!114 &2882869957475141969
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
