@@ -6,19 +6,20 @@ public class Weapon : MonoBehaviour
 {
     public Transform FirePoint;
     public GameObject bulletPrefab;
-
-    private void Update()
+    public float delay = 3;
+    public float timer;
+    void Update()
     {
-        if (Input.GetButtonDown("Fire1"))
+        timer += Time.deltaTime;
+        if (timer > delay)
         {
             Shoot();
+            timer = 0;
         }
-
-
-        void Shoot()
-        {
-            Instantiate(bulletPrefab, FirePoint.position, FirePoint.rotation);
-        }
+    }
+    void Shoot()
+    {
+        Instantiate(bulletPrefab, FirePoint.position, FirePoint.rotation);
     }
 
 }
