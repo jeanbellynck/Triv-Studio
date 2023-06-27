@@ -19,9 +19,9 @@ namespace Levels
 
         [SerializeField] 
         private GameObject _startSegment;
-        
-        //[SerializeField]
-        //private Vector3 _startSegmentPosition;
+
+        [SerializeField]
+        private Vector3 _startSegmentPosition;
 
         [SerializeField] 
         private GameObject _endSegment;
@@ -42,7 +42,7 @@ namespace Levels
 
         private void Awake()
         {
-            _lastSpawnPosition = new Vector3(transform.position.x,transform.position.y,0);
+            _lastSpawnPosition = _startSegmentPosition;
             _halfCameraWidth = Camera.main.GetDimensions().Width / 2;
         }
         
