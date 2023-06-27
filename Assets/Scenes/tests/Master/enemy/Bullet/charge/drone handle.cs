@@ -16,13 +16,5 @@ public class Handle : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
-    {
-      if (weapon.timer > 1)
-        {
-            anim.SetBool("DroneHandle", true);
-            Debug.Log("works");
-        }
-        
-    }
+
 }

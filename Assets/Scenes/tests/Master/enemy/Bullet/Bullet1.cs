@@ -12,6 +12,7 @@ public class Bullet1 : MonoBehaviour
     public LayerMask Ground;
     public Transform Bullet;
     public GameObject explosion;
+    public int damage = 25;
     // Start is called before the first frame update
     void Start()
     {
@@ -19,21 +20,19 @@ public class Bullet1 : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
-    {
-        
-    }
 
-    private void FixedUpdate()
-    {
-        collided = Physics2D.OverlapCircle(Bullet.position, colissionRadius, Ground);
 
-        if (collided)
+    private void OnTriggerEnter2D(Collider2D hitInfo)
+    {
+        HPtracker Damager = hitInfo.GetComponent<HPtracker>();
+        if (Damager != null)
         {
-            Instantiate(explosion, Bullet.position, transform.rotation = Quaternion.identity);
-            Destroy(gameObject);
+            Damager.TakeDamage(25);
         }
-       
-        if (!GetComponent<Renderer>().isVisible) Destroy(gameObject);
+        Debug.Log(hitInfo.name);
+
+        Instantiate(explosion, transform.position, transform.rotation);
+      
+        Destroy(gameObject);
     }
 }
