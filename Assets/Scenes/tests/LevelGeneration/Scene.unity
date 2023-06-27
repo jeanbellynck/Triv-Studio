@@ -321,11 +321,10 @@ MonoBehaviour:
   _player: {fileID: 863663268}
   _playerDistance: 50
   _startSegment: {fileID: 4598796320522703608, guid: 2acf151e624aad94fa13d61574637c9c, type: 3}
-  _startSegmentPosition: {x: -1.55, y: -0.24, z: 0}
+  _startSegmentPosition: {x: -8.44, y: -3.86, z: 0}
   _endSegment: {fileID: 4598796320522703608, guid: 2acf151e624aad94fa13d61574637c9c, type: 3}
   _segments:
   - {fileID: 4598796320522703608, guid: 2acf151e624aad94fa13d61574637c9c, type: 3}
-  _segmentWidth: 6.3
   _segmentXOffset: 0
 --- !u!1 &863663268 stripped
 GameObject:
