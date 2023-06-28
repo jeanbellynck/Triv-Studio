@@ -6,39 +6,55 @@ using System.IO;
 
 public class PasswordChecker : MonoBehaviour
 {
-    public TMP_InputField inputField;
-    private string correctPassword;
 
     [SerializeField]
     private UnityEvent onCorrectInput;
 
-    private void Start()
+    [SerializeField]
+    InputFieldManager inputFieldManagerScript;
+
+    private int inputSelected = 0;
+    public void inputChecker()
     {
-
-        string[] passwordList = File.ReadAllLines("Assets/PasswordListDoors.txt");
-        if (passwordList.Length > 0)
+        //Problem: wenn Password nicht korrekt, wird j inkrementiert und Schleife nicht nochmal wiederholt. Man kann also nur einmal pro Kasten checken
+        Debug.Log("input method");
+        for (int j = 0; j < inputFieldManagerScript.inputs.Length; j++)
         {
-            int randomIndex = Random.Range(0, passwordList.Length);
-            correctPassword = passwordList[randomIndex];
-            inputField.placeholder.GetComponent<TextMeshProUGUI>().text = correctPassword;
-
-            AdjustInputFieldWidth();
+            Debug.Log("input: round " + j);
+            if (inputFieldManagerScript.inputs[j].text == inputFieldManagerScript.correctPassword.Substring(j, 1))  //input of field is correct and matches password
+            {
+                inputSelected++;
+                Debug.Log("input correct?");
+                selectInputField();
+            }
+            else
+            {
+                inputFieldManagerScript.inputs[j].text = ""; //delete input
+                Debug.Log("delete input");
+            }
         }
     }
 
-    public void CheckPassword()
+    void selectInputField()
     {
-        if (inputField.text == correctPassword)
+        switch (inputSelected)
         {
-            inputField.text = "correct";
-            onCorrectInput?.Invoke();
+            case 0:
+                inputFieldManagerScript.inputs[0].Select();
+                break;
+            case 1:
+                inputFieldManagerScript.inputs[1].Select();
+                break;
+            case 2:
+                inputFieldManagerScript.inputs[2].Select();
+                break;
+            case 3:
+                inputFieldManagerScript.inputs[3].Select();
+                break;
+            case 4:
+                inputFieldManagerScript.inputs[4].Select();
+                onCorrectInput?.Invoke(); //and invoke onCorrectInput method to open the door
+                break;
         }
-    }
-
-    private void AdjustInputFieldWidth()
-    {
-        TextMeshProUGUI placeholderText = inputField.placeholder.GetComponent<TextMeshProUGUI>();
-        float placeholderWidth = placeholderText.GetPreferredValues(placeholderText.text).x;
-        inputField.GetComponent<RectTransform>().SetSizeWithCurrentAnchors(RectTransform.Axis.Horizontal, placeholderWidth + 20); // + 20 for the padding... I think :) 
     }
 }
