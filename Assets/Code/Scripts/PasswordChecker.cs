@@ -7,19 +7,25 @@ using TMPro;
 
 public class PasswordChecker : MonoBehaviour
 {
-
+    [Header("Events")]
     [SerializeField]
     private UnityEvent onCorrectInput;
 
+    [Header("Scripts")]
     [SerializeField]
     InputFieldManager inputFieldManagerScript;
 
     [SerializeField]
     CanvasAppear canvasScript;
-    private static int inputSelected = 0;
+
+    [SerializeField]
+    PlaySound playSoundScript;
+
+    [Header("Colors")]
     public Color lmuGreen = new Color(0, 0.533f, 0.227f, 0.5f);
     public Color errorRed = new Color(0.878f, 0.247f, 0.329f, 0.5f);
 
+    private static int inputSelected = 0;
     private void Start()
     {
         
@@ -41,6 +47,7 @@ public class PasswordChecker : MonoBehaviour
 
             if(inputSelected > 4)
             {
+                playSoundScript.playCorrectGuessSound();
                 EventSystem.current.SetSelectedGameObject(null); //deselect input field
                 onCorrectInput?.Invoke();
             }
@@ -48,7 +55,8 @@ public class PasswordChecker : MonoBehaviour
         else
         {
             colors.selectedColor = errorRed;
-            inputFieldManagerScript.inputs[inputSelected].text = ""; //delete input
+            playSoundScript.playWrongGuessSound();
+            inputFieldManagerScript.inputs[inputSelected].text = ""; 
             selectInputField();
         }
         //set colors to new colors

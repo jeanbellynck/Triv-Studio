@@ -370,9 +370,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 76610126}
-  - component: {fileID: 76610127}
   m_Layer: 5
-  m_Name: GameObject
+  m_Name: inputs
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -403,20 +402,6 @@ RectTransform:
   m_AnchoredPosition: {x: 70.8, y: 51.3}
   m_SizeDelta: {x: 78.225, y: 22.927}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &76610127
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 76610125}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0bcdc521326770846a70ac4f6f81a692, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  hidden: 1
-  target: {fileID: 76610125}
 --- !u!1 &77733841 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6911704279684313869, guid: eceb8a0579d23b449a918290763ab121, type: 3}
@@ -926,6 +911,7 @@ MonoBehaviour:
       m_Calls: []
   inputFieldManagerScript: {fileID: 1641900846}
   canvasScript: {fileID: 1641900847}
+  playSoundScript: {fileID: 1222008270}
   lmuGreen: {r: 0, g: 0.533, b: 0.227, a: 0.5}
   errorRed: {r: 0.878, g: 0.247, b: 0.329, a: 0.5}
 --- !u!114 &550924225
@@ -2990,6 +2976,7 @@ GameObject:
   - component: {fileID: 1222008265}
   - component: {fileID: 1222008268}
   - component: {fileID: 1222008269}
+  - component: {fileID: 1222008270}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -3149,6 +3136,20 @@ MonoBehaviour:
     mipBias: 0
     varianceClampScale: 0.9
     contrastAdaptiveSharpening: 0
+--- !u!114 &1222008270
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1222008264}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a0f267cd08a976349bd0f67afeffe050, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  wrongGuess: {fileID: 1641900848}
+  correctGuess: {fileID: 1641900848}
 --- !u!1 &1348512440
 GameObject:
   m_ObjectHideFlags: 0
@@ -8500,8 +8501,10 @@ GameObject:
   - component: {fileID: 1641900842}
   - component: {fileID: 1641900846}
   - component: {fileID: 1641900847}
+  - component: {fileID: 1641900848}
+  - component: {fileID: 1641900849}
   m_Layer: 5
-  m_Name: DoorInputCanvas (1)
+  m_Name: DoorInputCanvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8624,6 +8627,198 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hidden: 1
   canvas: {fileID: 1641900844}
+--- !u!82 &1641900848
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1641900840}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 170a08dde436ed649a7b9e8575decde2, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+--- !u!82 &1641900849
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1641900840}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 8413c4a30efd3c94ba6a8b2a2751f095, type: 3}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1001 &1643040003
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8779,6 +8974,7 @@ MonoBehaviour:
         m_CallState: 2
   inputFieldManagerScript: {fileID: 1641900846}
   canvasScript: {fileID: 1641900847}
+  playSoundScript: {fileID: 1222008270}
   lmuGreen: {r: 0, g: 0.533, b: 0.227, a: 0.5}
   errorRed: {r: 0.878, g: 0.247, b: 0.329, a: 0.5}
 --- !u!114 &1659282183
@@ -9230,6 +9426,7 @@ MonoBehaviour:
         m_CallState: 2
   inputFieldManagerScript: {fileID: 1641900846}
   canvasScript: {fileID: 1641900847}
+  playSoundScript: {fileID: 1222008270}
   lmuGreen: {r: 0, g: 0.533, b: 0.227, a: 0.5}
   errorRed: {r: 0.878, g: 0.247, b: 0.329, a: 0.5}
 --- !u!224 &1770845372
@@ -9361,6 +9558,7 @@ MonoBehaviour:
         m_CallState: 2
   inputFieldManagerScript: {fileID: 1641900846}
   canvasScript: {fileID: 1641900847}
+  playSoundScript: {fileID: 1222008270}
   lmuGreen: {r: 0, g: 0.533, b: 0.227, a: 0.5}
   errorRed: {r: 0.878, g: 0.247, b: 0.329, a: 0.5}
 --- !u!114 &1780984819
@@ -10276,6 +10474,7 @@ MonoBehaviour:
         m_CallState: 2
   inputFieldManagerScript: {fileID: 1641900846}
   canvasScript: {fileID: 1641900847}
+  playSoundScript: {fileID: 1222008270}
   lmuGreen: {r: 0, g: 0.533, b: 0.227, a: 0.5}
   errorRed: {r: 0.878, g: 0.247, b: 0.329, a: 0.5}
 --- !u!114 &2044047974
