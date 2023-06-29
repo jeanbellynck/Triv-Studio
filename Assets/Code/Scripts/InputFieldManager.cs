@@ -2,32 +2,32 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using System.IO;
 
 public class InputFieldManager : MonoBehaviour
 {
-    //get correct password from other script
+    private string[] passwordList;
     public string correctPassword;
-    //split string and assign chars to respective input fields as placeholders
-    //check in checkPassword if input in inputfield equal to correct char
-
-    
 
     public TMP_InputField[] inputs;
     
     void Start()
     {
-        correctPassword = "hallo";
+        passwordList = File.ReadAllLines("Assets/passwordListDoors.txt");
+        int randomIndex = Random.Range(0, passwordList.Length);
+        correctPassword = passwordList[randomIndex];
 
-        for(int i = 0; i < inputs.Length; i++)
+        for (int i = 0; i < inputs.Length; i++)
         {
             inputs[i].placeholder.GetComponent<TextMeshProUGUI>().text = correctPassword.Substring(i, 1);
             Debug.Log("placeholder: round " + i + " | " + correctPassword.Substring(i, 1));
         }
+    }
 
+    public void selectFirstInput()
+    {
         inputs[0].Select(); //select first input field automatically
 
     }
 
-
-    
 }
