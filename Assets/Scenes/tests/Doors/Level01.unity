@@ -3148,6 +3148,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a0f267cd08a976349bd0f67afeffe050, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  sourceObjectDoor: {fileID: 1641900840}
   wrongGuess: {fileID: 1641900848}
   correctGuess: {fileID: 1641900848}
 --- !u!1 &1348512440
@@ -8734,7 +8735,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 8413c4a30efd3c94ba6a8b2a2751f095, type: 3}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 0
