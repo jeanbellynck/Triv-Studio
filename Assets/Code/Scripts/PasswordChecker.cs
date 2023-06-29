@@ -3,6 +3,8 @@ using UnityEngine;
 using UnityEngine.Events;
 using TMPro;
 using System.IO;
+using UnityEngine.EventSystems;
+using System.Collections;
 
 public class PasswordChecker : MonoBehaviour
 {
@@ -13,48 +15,57 @@ public class PasswordChecker : MonoBehaviour
     [SerializeField]
     InputFieldManager inputFieldManagerScript;
 
-    private int inputSelected = 0;
+    private static int inputSelected = 0;
     public void inputChecker()
     {
-        //Problem: wenn Password nicht korrekt, wird j inkrementiert und Schleife nicht nochmal wiederholt. Man kann also nur einmal pro Kasten checken
-        Debug.Log("input method");
-        for (int j = 0; j < inputFieldManagerScript.inputs.Length; j++)
+        if (inputFieldManagerScript.inputs[inputSelected].text == inputFieldManagerScript.correctPassword.Substring(inputSelected, 1))  //input of field is correct and matches password
         {
-            Debug.Log("input: round " + j);
-            if (inputFieldManagerScript.inputs[j].text == inputFieldManagerScript.correctPassword.Substring(j, 1))  //input of field is correct and matches password
+            inputSelected++;
+            selectInputField();
+
+            if(inputSelected > 4)
             {
-                inputSelected++;
-                Debug.Log("input correct?");
-                selectInputField();
-            }
-            else
-            {
-                inputFieldManagerScript.inputs[j].text = ""; //delete input
-                Debug.Log("delete input");
+                inputSelected = 0;
+                onCorrectInput?.Invoke();
             }
         }
+        else
+        {
+            inputFieldManagerScript.inputs[inputSelected].text = ""; //delete input
+            selectInputField();
+        }
     }
+
 
     void selectInputField()
     {
         switch (inputSelected)
         {
             case 0:
-                inputFieldManagerScript.inputs[0].Select();
+                inputFieldManagerScript.inputs[0].ActivateInputField();
                 break;
             case 1:
-                inputFieldManagerScript.inputs[1].Select();
+                inputFieldManagerScript.inputs[1].ActivateInputField();
                 break;
             case 2:
-                inputFieldManagerScript.inputs[2].Select();
+                inputFieldManagerScript.inputs[2].ActivateInputField();
                 break;
             case 3:
-                inputFieldManagerScript.inputs[3].Select();
+                inputFieldManagerScript.inputs[3].ActivateInputField();
                 break;
             case 4:
-                inputFieldManagerScript.inputs[4].Select();
-                onCorrectInput?.Invoke(); //and invoke onCorrectInput method to open the door
+                inputFieldManagerScript.inputs[4].ActivateInputField();
+                //and invoke onCorrectInput method to open the door
+                break;
+            default:
                 break;
         }
     }
+
+    public void remainSelected()
+    {
+        selectInputField();
+        Debug.Log("remeinsSelected");
+    }
 }
+
