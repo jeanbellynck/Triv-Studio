@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
-    private float horizontal;
+    public float horizontal = 10f;
     public float speed = 10f;
     private float jumpingPower = 16f;
     public bool isGrounded = true;
@@ -15,7 +15,7 @@ public class PlayerMovement : MonoBehaviour
 
     void Update()
     {
-        horizontal = Input.GetAxisRaw("Horizontal");
+        horizontal = speed;
 
         if (Input.GetButtonDown("Jump") && isGrounded)
         {
@@ -32,12 +32,17 @@ public class PlayerMovement : MonoBehaviour
 
     private void FixedUpdate()
     {
-        rb.velocity = new Vector2(horizontal * speed, rb.velocity.y);
+        rb.velocity = new Vector2(speed, rb.velocity.y);
         isGrounded = checkGrounded();
     }
 
     private bool checkGrounded()
     {
         return Physics2D.OverlapCircle(groundCheck.position, 0.2f, groundLayer);
+    }
+
+    public void playerGoOrStop()
+    {
+        speed = speed > 0f ? 0f : 10f;
     }
 }

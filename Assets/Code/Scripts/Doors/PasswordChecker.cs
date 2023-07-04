@@ -21,6 +21,9 @@ public class PasswordChecker : MonoBehaviour
     [SerializeField]
     PlaySound playSoundScript;
 
+    [SerializeField]
+    PlayerMovement playerMovementScript;
+
     [Header("Colors")]
     public Color lmuGreen = new Color(0, 0.533f, 0.227f, 0.5f);
     public Color errorRed = new Color(0.878f, 0.247f, 0.329f, 0.5f);
@@ -50,6 +53,7 @@ public class PasswordChecker : MonoBehaviour
                 playSoundScript.playCorrectGuessSound();
                 EventSystem.current.SetSelectedGameObject(null); //deselect input field
                 onCorrectInput?.Invoke();
+                playerMovementScript.Invoke("playerGoOrStop", 1);
             }
         }
         else
