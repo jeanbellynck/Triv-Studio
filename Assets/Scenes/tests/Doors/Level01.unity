@@ -1095,10 +1095,10 @@ RectTransform:
   m_Father: {fileID: 802990846}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -101.3, y: -31.5}
-  m_SizeDelta: {x: 100, y: 100}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 85.84381, y: 80.84381}
+  m_SizeDelta: {x: 133.6876, y: 133.6876}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &797686666
 MonoBehaviour:
@@ -1151,13 +1151,14 @@ GameObject:
   - component: {fileID: 802990844}
   - component: {fileID: 802990843}
   - component: {fileID: 802990847}
+  - component: {fileID: 802990848}
   m_Layer: 5
-  m_Name: TimerCanvas
+  m_Name: Timer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &802990843
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1259,6 +1260,20 @@ MonoBehaviour:
   timerFillImg: {fileID: 797686666}
   timerText: {fileID: 1288606350}
   maxTime: 5
+--- !u!114 &802990848
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 802990842}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bd821a80c741aa14eab96b465cc7e0f0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hidden: 0
+  canvas: {fileID: 802990845}
 --- !u!1001 &852296645
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1879,10 +1894,10 @@ RectTransform:
   m_Father: {fileID: 802990846}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -101.3, y: -31.5}
-  m_SizeDelta: {x: 68.465, y: 27.5386}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 85.84381, y: 80.84381}
+  m_SizeDelta: {x: 91.5293, y: 36.8157}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1288606350
 MonoBehaviour:
@@ -2014,10 +2029,10 @@ RectTransform:
   m_Father: {fileID: 802990846}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -101.3, y: -31.5}
-  m_SizeDelta: {x: 100, y: 100}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 85.84381, y: 80.84381}
+  m_SizeDelta: {x: 133.6876, y: 133.6876}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1328104038
 MonoBehaviour:
@@ -7259,67 +7274,6 @@ Transform:
   m_Father: {fileID: 870201836}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1592636442
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1592636444}
-  - component: {fileID: 1592636443}
-  - component: {fileID: 1592636445}
-  m_Layer: 0
-  m_Name: Timer
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 0
---- !u!114 &1592636443
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1592636442}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 02c58b3f3d724b24cb5ffcc940b2917a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  timerFillImg: {fileID: 797686666}
-  timerText: {fileID: 0}
-  maxTime: 5
---- !u!4 &1592636444
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1592636442}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 91.71081, y: 106.29237, z: 0.25122845}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 8
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1592636445
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1592636442}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: be49d625478c8d74c973aae017aabb76, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  timer01: {fileID: 802990847}
 --- !u!1001 &1643040003
 PrefabInstance:
   m_ObjectHideFlags: 0
