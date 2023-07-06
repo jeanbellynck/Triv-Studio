@@ -511,6 +511,7 @@ MonoBehaviour:
   canvasScript: {fileID: 5092943261822184025}
   playSoundScript: {fileID: 0}
   playerMovementScript: {fileID: 0}
+  timerControllerScript: {fileID: 0}
   lmuGreen: {r: 0, g: 0.533, b: 0.227, a: 0.5}
   errorRed: {r: 0.878, g: 0.247, b: 0.329, a: 0.5}
 --- !u!1 &2786193631570104225
@@ -1122,6 +1123,7 @@ MonoBehaviour:
   canvasScript: {fileID: 5092943261822184025}
   playSoundScript: {fileID: 0}
   playerMovementScript: {fileID: 0}
+  timerControllerScript: {fileID: 0}
   lmuGreen: {r: 0, g: 0.533, b: 0.227, a: 0.5}
   errorRed: {r: 0.878, g: 0.247, b: 0.329, a: 0.5}
 --- !u!1 &4160175940375732726
@@ -2701,6 +2703,7 @@ MonoBehaviour:
   canvasScript: {fileID: 5092943261822184025}
   playSoundScript: {fileID: 0}
   playerMovementScript: {fileID: 0}
+  timerControllerScript: {fileID: 9213366505054440078, guid: 4537729b02d357442b2027c92faf134c, type: 3}
   lmuGreen: {r: 0, g: 0.533, b: 0.227, a: 0.5}
   errorRed: {r: 0.878, g: 0.247, b: 0.329, a: 0.5}
 --- !u!1 &6413625892860259931
@@ -2923,6 +2926,7 @@ MonoBehaviour:
   canvasScript: {fileID: 5092943261822184025}
   playSoundScript: {fileID: 0}
   playerMovementScript: {fileID: 0}
+  timerControllerScript: {fileID: 0}
   lmuGreen: {r: 0, g: 0.533, b: 0.227, a: 0.5}
   errorRed: {r: 0.878, g: 0.247, b: 0.329, a: 0.5}
 --- !u!1 &6417370182496359986
@@ -3396,6 +3400,7 @@ MonoBehaviour:
   canvasScript: {fileID: 5092943261822184025}
   playSoundScript: {fileID: 0}
   playerMovementScript: {fileID: 0}
+  timerControllerScript: {fileID: 0}
   lmuGreen: {r: 0, g: 0.533, b: 0.227, a: 0.5}
   errorRed: {r: 0.878, g: 0.247, b: 0.329, a: 0.5}
 --- !u!1 &8489223580134658216
