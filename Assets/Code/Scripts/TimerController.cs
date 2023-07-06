@@ -9,6 +9,8 @@ public class TimerController : MonoBehaviour
     public Image timerFillImg;
     [SerializeField]
     public TMP_Text timerText;
+    [SerializeField]
+    public Retry retryScript;
 
     private float timeRemaining;
     public float maxTime = 5f;
@@ -30,6 +32,7 @@ public class TimerController : MonoBehaviour
         {
             // game over
             Debug.Log("game over");
+            retryScript.loadGameOver();
         }
     }
 
