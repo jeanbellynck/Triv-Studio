@@ -3,7 +3,6 @@ using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
-using TMPro;
 
 public class PasswordChecker : MonoBehaviour
 {
@@ -21,18 +20,26 @@ public class PasswordChecker : MonoBehaviour
     [SerializeField]
     PlaySound playSoundScript;
 
+    [SerializeField]
+    PlayerMovement playerMovementScript;
+
     [Header("Colors")]
     public Color lmuGreen = new Color(0, 0.533f, 0.227f, 0.5f);
     public Color errorRed = new Color(0.878f, 0.247f, 0.329f, 0.5f);
 
     private static int inputSelected = 0;
+
     private void Start()
     {
-        
+        //since the prefabs don't allow to reference other scene objects that aren't prefabs themselves, these references have to be added on runtime
+        if (playSoundScript == null)
+            playSoundScript = FindAnyObjectByType<PlaySound>();
+
+        if (playerMovementScript == null)
+            playerMovementScript = FindAnyObjectByType<PlayerMovement>();
     }
     public void inputChecker()
     {
-        Debug.Log("Input Checker");
         if (inputSelected > 4)
             return;
         var colors = inputFieldManagerScript.inputs[inputSelected].colors;
@@ -50,6 +57,8 @@ public class PasswordChecker : MonoBehaviour
                 playSoundScript.playCorrectGuessSound();
                 EventSystem.current.SetSelectedGameObject(null); //deselect input field
                 onCorrectInput?.Invoke();
+                playerMovementScript.Invoke("playerGoOrStop", 1);
+                inputSelected = 0;
             }
         }
         else

@@ -267,10 +267,10 @@ Camera:
   m_LensShift: {x: 0, y: 0}
   m_NormalizedViewPortRect:
     serializedVersion: 2
-    x: 0.14751211
-    y: 0.06521739
-    width: 0.7045355
-    height: 0.8695652
+    x: 0.007684426
+    y: 0.008196721
+    width: 0.9836065
+    height: 0.9836065
   near clip plane: 0.3
   far clip plane: 1000
   field of view: 60
@@ -675,6 +675,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 876438892604768633, guid: 5a3c1ac776f8a3042a1db9775767090f, type: 3}
+      propertyPath: speed
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 876438892604768633, guid: 5a3c1ac776f8a3042a1db9775767090f, type: 3}
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
@@ -777,12 +781,12 @@ MonoBehaviour:
   _player: {fileID: 1179887043}
   _playerDistance: 5.66
   _startSegment: {fileID: 4598796320522703608, guid: 2acf151e624aad94fa13d61574637c9c, type: 3}
+  _startSegmentPosition: {x: 0, y: 0, z: 0}
   _endSegment: {fileID: 4598796320522703608, guid: 2acf151e624aad94fa13d61574637c9c, type: 3}
   _segments:
   - {fileID: 4598796320522703608, guid: 2acf151e624aad94fa13d61574637c9c, type: 3}
   - {fileID: 7073983965712047117, guid: 6a3003f4084bc8c449e76ced88472c04, type: 3}
   - {fileID: 7662973136507061341, guid: 673c77e658351214c9add1c37e535cfb, type: 3}
-  _segmentWidth: 14.9
   _segmentXOffset: 0
 --- !u!4 &1229209437
 Transform:
