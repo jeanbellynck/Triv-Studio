@@ -10,33 +10,23 @@ namespace Levels
     /// </summary>
     public sealed class LevelGenerator : MonoBehaviour
     {
-        [SerializeField] 
-        private GameObject _player;
-
         [SerializeField]
-        [Tooltip("Stops spawning random segments after the player has traveled a given distance")]
-        private float _playerDistance;
-
-        [SerializeField] 
         private GameObject _startSegment;
 
         [SerializeField]
         private Vector3 _startSegmentPosition;
 
-        [SerializeField] 
-        private GameObject _endSegment;
-
         [Tooltip("List of segments that get randomly spawned")]
         [SerializeField] 
         private List<GameObject> _segments = new();
 
-        [SerializeField] 
+        [Tooltip("Visible gap between two spawned segments")]
+        [SerializeField]
         private float _segmentXOffset;
 
         private Vector3 _lastSpawnPosition;
         private float _halfCameraWidth;
         private float _currentSegmentWidth;
-        private bool _endSegmentSpawned;
 
         private void Awake()
         {
@@ -51,21 +41,6 @@ namespace Levels
         
         private void Update()
         {
-            if (_endSegmentSpawned)
-            {
-                return;
-            }
-
-            var distance = _player.GetComponent<playerMovement>().Distance;
-            
-            if (distance > _playerDistance || _segments.Count == 0)
-            {
-                SpawnSegment(_endSegment);
-                _endSegmentSpawned = true;
-
-                return;
-            }
-
             if (CanSpawnRandomSegment())
             {
                 SpawnRandomSegment();
