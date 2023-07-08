@@ -267,10 +267,10 @@ Camera:
   m_LensShift: {x: 0, y: 0}
   m_NormalizedViewPortRect:
     serializedVersion: 2
-    x: 0.007684426
-    y: 0.008196721
-    width: 0.9836065
-    height: 0.9836065
+    x: 0.2263023
+    y: 0.13709676
+    width: 0.5465414
+    height: 0.7258064
   near clip plane: 0.3
   far clip plane: 1000
   field of view: 60
@@ -300,7 +300,7 @@ Transform:
   m_GameObject: {fileID: 713359099}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -4.884697, y: -3.01626, z: -10}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 3, y: 3, z: 3}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -778,11 +778,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 12145f502bca1c441a3de6cc613610c8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _player: {fileID: 1179887043}
-  _playerDistance: 5.66
   _startSegment: {fileID: 4598796320522703608, guid: 2acf151e624aad94fa13d61574637c9c, type: 3}
   _startSegmentPosition: {x: 0, y: 0, z: 0}
-  _endSegment: {fileID: 4598796320522703608, guid: 2acf151e624aad94fa13d61574637c9c, type: 3}
   _segments:
   - {fileID: 4598796320522703608, guid: 2acf151e624aad94fa13d61574637c9c, type: 3}
   - {fileID: 7073983965712047117, guid: 6a3003f4084bc8c449e76ced88472c04, type: 3}

@@ -21,7 +21,7 @@ public class paralaxController : MonoBehaviour
     float farthestBack;
 
 
-    [Range(0.01f, 0.05f)]
+    [Range(0.0025f, 0.01f)]
     public float parallaxSpeed;
 
 

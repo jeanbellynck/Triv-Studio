@@ -35,9 +35,10 @@ namespace Levels
             _destroyed = true;
         }
 
+
         private bool CanDestroySegment()
         {
-            var x1 = Camera.main.transform.position.x - _halfCameraWidth;
+            var x1 = Camera.main.transform.position.x - _halfCameraWidth -_segmentWidth; // Adding segment width as a buffer
             var x2 = gameObject.transform.position.x;
 
             return x2 < x1 && Mathf.Abs(x1 - x2) > _segmentWidth;

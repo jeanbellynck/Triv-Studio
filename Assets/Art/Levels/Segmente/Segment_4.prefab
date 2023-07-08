@@ -3605,7 +3605,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c8a037bdf65f46745b0b2d7a70ef14fb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _segmentWidth: 6.3
+  _segmentWidth: 21
 --- !u!114 &802115502893536546
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3618,7 +3618,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 553e7ce2efe4bf341b4c31277f76bd28, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _segmentWidth: 6.3
+  _segmentWidth: 21
 --- !u!1 &7760282358034757457
 GameObject:
   m_ObjectHideFlags: 0
@@ -3662,7 +3662,7 @@ Grid:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7760282358034757457}
   m_Enabled: 1
-  m_CellSize: {x: 0.3, y: 0.3, z: 0}
+  m_CellSize: {x: 1, y: 1, z: 0}
   m_CellGap: {x: 0, y: 0, z: 0}
   m_CellLayout: 0
   m_CellSwizzle: 0
