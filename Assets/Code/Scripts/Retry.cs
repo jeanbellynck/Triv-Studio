@@ -8,7 +8,7 @@ public class Retry : MonoBehaviour
     {
         // Only specifying the sceneName or sceneBuildIndex will load the Scene with the Single mode
         //SceneManager.LoadScene("Level01");
-        SceneManager.LoadScene("Level01Doors");
+        SceneManager.LoadScene("Main");
     }
 
     public void loadStartingScreen()
