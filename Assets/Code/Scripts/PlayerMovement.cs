@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.EventSystems;
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -69,7 +70,7 @@ public class PlayerMovement : MonoBehaviour
                 runEventOnceOnCollisionEnter = true;
             }
         }
-        
+
         Debug.DrawRay(transform.position, transform.right * rayDistance, Color.red);
     }
 

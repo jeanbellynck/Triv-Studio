@@ -5,15 +5,15 @@ using UnityEngine;
 public class PlaySound : MonoBehaviour
 {
     [Header("Door Sounds")]
-    public GameObject sourceObjectDoor;
+    public GameObject sourceObjectDoor; // the gameObject you have the AudioSource files on that you want to play
     public AudioSource wrongGuess;
     public AudioSource correctGuess;
 
     void Start()
     {
-        AudioSource[] audios = sourceObjectDoor.GetComponents<AudioSource>();
-        wrongGuess = audios[0];
-        correctGuess = audios[1];
+        AudioSource[] doorAudios = sourceObjectDoor.GetComponents<AudioSource>();
+        wrongGuess = doorAudios[0];
+        correctGuess = doorAudios[1];
 
        
     }
