@@ -7,6 +7,7 @@ public class PlayerMovement : MonoBehaviour
     public float speed = 10f;
     private float jumpingPower = 30f;
     public bool isGrounded = true;
+    public Animator animator;
 
     public float rayDistance;
     private bool runEventOnceOnCollisionEnter = true;
@@ -19,6 +20,10 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] public UnityEvent onPlayerStop;
     [SerializeField] public UnityEvent onPlayerGo;
 
+    void Start()
+    {
+        animator = GetComponent<Animator>();
+    }
 
     void Update()
     {
@@ -27,11 +32,13 @@ public class PlayerMovement : MonoBehaviour
         if (Input.GetButtonDown("Jump") && isGrounded)
         {
             rb.velocity = new Vector2(rb.velocity.x, jumpingPower);
+            animator.SetBool("isJumping", true);
         }
 
         if (Input.GetButtonUp("Jump") && rb.velocity.y > 0f)
         {
             rb.velocity = new Vector2(rb.velocity.x, rb.velocity.y * 0.5f);
+            animator.SetBool("isJumping", false);
         }
     }
 

@@ -643,10 +643,10 @@ Camera:
   m_LensShift: {x: 0, y: 0}
   m_NormalizedViewPortRect:
     serializedVersion: 2
-    x: 0.059633028
-    y: 0.012635379
-    width: 0.88073397
-    height: 0.97472924
+    x: 0.30722892
+    y: 0.17541765
+    width: 0.38554218
+    height: 0.64439136
   near clip plane: 0.3
   far clip plane: 1000
   field of view: 60
@@ -1124,7 +1124,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1624631580}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.8565445, y: -0.27733755, z: -10.012949}
+  m_LocalPosition: {x: 0.6772442, y: -0.35353756, z: -10.012949}
   m_LocalScale: {x: 2, y: 2, z: 2}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1296,8 +1296,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8449242456558230224}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -9.5868, y: -1.4129, z: 0}
-  m_LocalScale: {x: 0.53454155, y: 0.44818446, z: 0.20198627}
+  m_LocalPosition: {x: -9.7661, y: -1.4891, z: 0}
+  m_LocalScale: {x: 0.4986692, y: 0.45706496, z: 0.20198627}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1643277946}
@@ -1421,6 +1421,7 @@ MonoBehaviour:
   horizontal: 10
   speed: 10
   isGrounded: 1
+  animator: {fileID: 1638101347588364653}
   rayDistance: 0
   rb: {fileID: 6070663331800696307}
   groundCheck: {fileID: 1643277946}
