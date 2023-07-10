@@ -4545,6 +4545,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: DoorOpen
       objectReference: {fileID: 0}
+    - target: {fileID: 5635524292593712515, guid: 814b2f6056661ec4698ece1b61574b4d, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6284535626328036107, guid: 814b2f6056661ec4698ece1b61574b4d, type: 3}
       propertyPath: m_RootOrder
       value: -1
@@ -4589,14 +4593,40 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7901538895961455104, guid: 814b2f6056661ec4698ece1b61574b4d, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 3831693100866691869, guid: 814b2f6056661ec4698ece1b61574b4d, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 5635524292593712515, guid: 814b2f6056661ec4698ece1b61574b4d, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1503620392315881977}
   m_SourcePrefab: {fileID: 100100000, guid: 814b2f6056661ec4698ece1b61574b4d, type: 3}
 --- !u!4 &2563307058871104774 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6284535626328036107, guid: 814b2f6056661ec4698ece1b61574b4d, type: 3}
   m_PrefabInstance: {fileID: 8405289114358949389}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &4220139580276562830 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5635524292593712515, guid: 814b2f6056661ec4698ece1b61574b4d, type: 3}
+  m_PrefabInstance: {fileID: 8405289114358949389}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1503620392315881977
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4220139580276562830}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0bcdc521326770846a70ac4f6f81a692, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hidden: 0
+  target: {fileID: 0}
