@@ -3,6 +3,7 @@ using UnityEngine.UI;
 using TMPro;
 
 
+//inspired by https://www.youtube.com/watch?v=2gPHkaPGbpI
 public class TimerController : MonoBehaviour
 {
     [SerializeField]

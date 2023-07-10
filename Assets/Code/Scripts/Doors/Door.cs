@@ -4,8 +4,9 @@ using UnityEngine;
 
 public class Door : MonoBehaviour  
 {
-    private Animator animator; 
+    private Animator animator;
 
+    //inspired by https://www.youtube.com/watch?v=1IJmenD1HOk
     private void Awake()
     {
         animator = GetComponent<Animator>();

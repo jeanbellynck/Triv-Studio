@@ -48,6 +48,7 @@ public class PlayerMovement : MonoBehaviour
         rb.velocity = new Vector2(speed, rb.velocity.y);
         isGrounded = checkGrounded();
 
+        //https://www.youtube.com/watch?v=55bdhtQzzSA
         int layermask = 1 << 5;
         layermask = -layermask;
         RaycastHit2D hitRight = Physics2D.Raycast(transform.position, transform.right, rayDistance, layermask);
@@ -59,7 +60,6 @@ public class PlayerMovement : MonoBehaviour
                 runEventOnceOnCollisionEnter = false;
                 runEventOnceOnCollisionExit = true;
             }
-            Debug.Log($"Player hit {hitRight.collider.name}");
         }
         else
         {

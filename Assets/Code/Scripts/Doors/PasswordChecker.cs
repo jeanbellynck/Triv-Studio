@@ -4,6 +4,7 @@ using UnityEngine.Events;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
+//inspired by https://www.youtube.com/watch?v=U8Py8nI-azc, https://discussions.unity.com/t/how-do-i-change-an-inputfields-color-in-onchangevalue/193322/2
 public class PasswordChecker : MonoBehaviour
 {
     [Header("Events")]
