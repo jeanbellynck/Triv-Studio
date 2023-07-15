@@ -4,7 +4,7 @@ using UnityEngine.EventSystems;
 
 public class PlayerMovement : MonoBehaviour
 {
-    public float horizontal = 10f;
+    public float horizontal = 0f;
     public float speed = 10f;
     private float jumpingPower = 30f;
     public bool isGrounded = true;
