@@ -156,7 +156,20 @@ namespace PathCreation {
         /// Number of bezier curves making up this path
         public int NumSegments {
             get {
+                if(points == null)
+                {
+                    return 0;
+                }
                 return points.Count / 3;
+            }
+        }
+
+        /// Is the points array null?
+        public bool HasPoints
+        {
+            get
+            {
+                return points != null;
             }
         }
 

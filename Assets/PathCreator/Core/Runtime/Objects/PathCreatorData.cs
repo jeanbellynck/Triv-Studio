@@ -44,7 +44,7 @@ namespace PathCreation {
         public int tabIndex;
 
         public void Initialize (bool defaultIs2D) {
-            if (_bezierPath == null) {
+            if (_bezierPath == null || !_bezierPath.HasPoints) {
                 CreateBezier (Vector3.zero, defaultIs2D);
             }
             vertexPathUpToDate = false;
