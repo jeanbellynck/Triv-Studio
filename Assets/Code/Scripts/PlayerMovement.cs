@@ -8,7 +8,7 @@ public class PlayerMovement : MonoBehaviour
     public float speed = 10f;
     private float jumpingPower = 30f;
     public bool isGrounded = true;
-    public Animator animator;
+    public UnityEngine.Animator animator;
 
     public float rayDistance;
     private bool runEventOnceOnCollisionEnter = true;
@@ -23,7 +23,7 @@ public class PlayerMovement : MonoBehaviour
 
     void Start()
     {
-        animator = GetComponent<Animator>();
+        animator = GetComponent<UnityEngine.Animator>();
     }
 
     void Update()
@@ -76,7 +76,7 @@ public class PlayerMovement : MonoBehaviour
 
     private bool checkGrounded()
     {
-        return Physics2D.OverlapCircle(groundCheck.position, 0.2f, groundLayer);
+        return Physics2D.OverlapCircle(groundCheck.position, 0.4f, groundLayer);
     }
 
     public void playerGoOrStop()

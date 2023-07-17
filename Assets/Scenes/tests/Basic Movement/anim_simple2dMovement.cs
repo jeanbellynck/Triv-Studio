@@ -4,13 +4,13 @@ using UnityEngine;
 
 public class simple2dMovement : MonoBehaviour
 {
-    private Animator animator;
+    private UnityEngine.Animator animator;
     private bool facingLeft;
     public PlayerMovement playerMovementScript;
 
     void Start()
     {
-        animator = GetComponent<Animator>();
+        animator = GetComponent<UnityEngine.Animator>();
         facingLeft = false;
     }
 
