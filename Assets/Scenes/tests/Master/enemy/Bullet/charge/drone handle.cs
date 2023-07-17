@@ -6,13 +6,13 @@ public class Handle : MonoBehaviour
 {
     Weapon weapon;
     public GameObject Enemy;
-    private Animator anim;
+    private UnityEngine.Animator anim;
     
     // Start is called before the first frame update
     void Awake()
     {
         weapon = GameObject.Find("Enemy").GetComponent<Weapon>();
-        anim = GetComponent<Animator>();
+        anim = GetComponent<UnityEngine.Animator>();
     }
 
     // Update is called once per frame
