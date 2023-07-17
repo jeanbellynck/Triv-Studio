@@ -25,12 +25,16 @@ namespace Levels
         private float _segmentXOffset;
 
         private Vector3 _lastSpawnPosition;
+        private Vector3 _lastEndPosition;
         private float _halfCameraWidth;
         private float _currentSegmentWidth;
+
+        private string END_POSITION_NAME = "EndPosition";
 
         private void Awake()
         {
             _lastSpawnPosition = _startSegmentPosition;
+            _lastEndPosition = _startSegmentPosition + _startSegment.transform.Find(END_POSITION_NAME).transform.position;
             _halfCameraWidth = Camera.main.GetDimensions().Width / 2;
         }
         
@@ -49,7 +53,7 @@ namespace Levels
 
         private void InitializeSegments()
         {
-            Instantiate(_startSegment, _lastSpawnPosition, Quaternion.identity);
+            Instantiate(_startSegment, _startSegmentPosition, Quaternion.identity);
             _currentSegmentWidth = _startSegment.GetComponent<SegmentDescriptor>().SegmentWidth;
 
             while (_lastSpawnPosition.x <= _halfCameraWidth)
@@ -58,7 +62,7 @@ namespace Levels
             }
         }
 
-        private bool CanSpawnRandomSegment()
+        private bool CanSpawnRandomSegment() 
         {
             var x1 = Camera.main.transform.position.x + _halfCameraWidth;
             var x2 = _lastSpawnPosition.x;
@@ -75,9 +79,17 @@ namespace Levels
 
         private void SpawnSegment(GameObject segment)
         {
-            _lastSpawnPosition += new Vector3(_currentSegmentWidth + _segmentXOffset, 0, 0);
-            Instantiate(segment, _lastSpawnPosition, Quaternion.identity);
-            _currentSegmentWidth = segment.GetComponent<SegmentDescriptor>().SegmentWidth;
+            // determine new Spawn Position
+            //Vector3 newSpawnPosition = _lastSpawnPosition + new Vector3(_currentSegmentWidth + _segmentXOffset, 0, 0);
+            Vector3 newSpawnPosition = _lastEndPosition;
+
+            // Instantiate new Segment
+            GameObject spawnedSegment = Instantiate(segment, newSpawnPosition, Quaternion.identity);
+
+            //update global variables
+            _lastSpawnPosition = spawnedSegment.transform.position;
+            _currentSegmentWidth = spawnedSegment.GetComponent<SegmentDescriptor>().SegmentWidth;
+            _lastEndPosition = spawnedSegment.transform.Find(END_POSITION_NAME).transform.position;
         }
     }
 }
