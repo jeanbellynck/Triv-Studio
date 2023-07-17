@@ -16,7 +16,7 @@ public class Follow_X : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Vector3 newPos = transform.position;
+        Vector2 newPos = transform.position;
 
         if(follow.transform.position.x > transform.position.x)
         {
