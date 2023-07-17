@@ -2,7 +2,7 @@ using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.EventSystems;
 
-public class PlayerMovement : MonoBehaviour
+public class Playermvnt : MonoBehaviour
 {
     public float horizontal = 0f;
     public float speed = 10f;
@@ -41,6 +41,7 @@ public class PlayerMovement : MonoBehaviour
             rb.velocity = new Vector2(rb.velocity.x, rb.velocity.y * 0.5f);
             animator.SetBool("isJumping", false);
         }
+
     }
 
     private void FixedUpdate()
@@ -48,7 +49,7 @@ public class PlayerMovement : MonoBehaviour
         rb.velocity = new Vector2(speed, rb.velocity.y);
         isGrounded = checkGrounded();
 
-        //https://www.youtube.com/watch?v=55bdhtQzzSA
+       
         int layermask = 1 << 5;
         layermask = -layermask;
         RaycastHit2D hitRight = Physics2D.Raycast(transform.position, transform.right, rayDistance, layermask);

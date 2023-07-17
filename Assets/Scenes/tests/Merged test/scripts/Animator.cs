@@ -2,11 +2,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class simple2dMovement : MonoBehaviour
+public class Animator: MonoBehaviour
 {
     private UnityEngine.Animator animator;
     private bool facingLeft;
-    public PlayerMovement playerMovementScript;
+    public Playermvnt playerMovementScript;
 
     void Start()
     {
