@@ -1,5 +1,5 @@
 # Triv-Studio
-## About the Project
+## 🎮 About the Project
 This project was created during the lecture Multimedia Programming at the LMU. The task was to create a 2D game in Unity.
 Our game "Excellence Defenders" was finished within 2 months without any previous Unity experience and therefore still has some potential for improvement.
 
@@ -18,7 +18,7 @@ If he takes too long it's game over.
 - Pixel Art
 - TUM vs LMU
 
-## Assets Files Description
+## 📂 Assets Files Description
 The most important files can be found in the following folders:
 - **Art**
   - **/Animations** custom animations of player and doors
@@ -28,7 +28,7 @@ The most important files can be found in the following folders:
   - **/Scripts** all C# scripts
 - **Scenes** here is the main scene, the final game scenes that are used. All other scenes (in the tests folder) can be ignored
 
-## Authors
+## 🧑‍💻 Authors
 - David Penn
 - Agata Kim
 - Jean
