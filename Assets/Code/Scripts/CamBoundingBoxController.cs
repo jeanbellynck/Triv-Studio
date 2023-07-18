@@ -16,8 +16,12 @@ public class CamBoundingBoxController : MonoBehaviour
 
     [SerializeField]
     private float lowerLimit = 0f;
-    
-    public float upperLimit = 1000f;
+    [SerializeField]
+    private float upperLimit = 1000f;
+    [SerializeField]
+    private float verticalDisplacement = 5f;
+    [SerializeField]
+    private float horizontalDisplacement = 0f;
     [SerializeField]
     private bool touchingDeathZone = false;
 
@@ -45,6 +49,7 @@ public class CamBoundingBoxController : MonoBehaviour
 
     private void updatePos()
     {
+        //newPos += new Vector3(horizontalDisplacement ,verticalDisplacement,0);
         transform.position = newPos;
     }
 
@@ -52,22 +57,23 @@ public class CamBoundingBoxController : MonoBehaviour
     {
 
         if (!canMoveVertical()) return;
-        if (checkIfTouchingDeathZone())
+        checkIfTouchingDeathZone();
+        if (touchingDeathZone)
         {
             // if the Cam touches a death Zone, it only goes up, not down
             newPos.y = Math.Max(followPos.y, transform.position.y);
-            touchingDeathZone = true;
+      
         }
-        else { 
+        else 
+        { 
             newPos.y = followPos.y;
-            touchingDeathZone = false;
         }
     }
 
     private bool checkIfTouchingDeathZone()
     {
         
-       return Physics2D.OverlapBox(transform.position - new Vector3(0,10,0), new Vector2(10,10), 0f);
+       return touchingDeathZone = Physics2D.OverlapBox(transform.position - new Vector3(0,10,0), new Vector2(20,3), 0f, deathLayer );
         
     }
 

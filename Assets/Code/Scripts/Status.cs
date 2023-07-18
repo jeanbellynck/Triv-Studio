@@ -18,16 +18,12 @@ public class HPtracker : MonoBehaviour
             Die();
         }
     }
-        void Die()
+    void Die()
     {
         Instantiate(deathEffect, transform.position, Quaternion.identity);
         Destroy(gameObject);
     }
 
-    private void OnTriggerEnter2D ()
-    {
-        
-    }
 
     // Update is called once per frame
 

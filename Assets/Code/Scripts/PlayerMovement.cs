@@ -1,94 +1,143 @@
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.EventSystems;
+using UnityEngine.SceneManagement;
 
 public class PlayerMovement : MonoBehaviour
 {
-    public float horizontal = 0f;
-    private float jumpingPower = 30f;
-    public bool isGrounded = true;
-    public Animator animator;
-
-    public float rayDistance;
-    private bool runEventOnceOnCollisionEnter = true;
-    private bool runEventOnceOnCollisionExit = false;
 
     [SerializeField] private Rigidbody2D rb;
     [SerializeField] private Transform groundCheck;
     [SerializeField] private LayerMask groundLayer;
+    [SerializeField] private LayerMask deathLayer;
 
-    [SerializeField] public UnityEvent onPlayerStop;
-    [SerializeField] public UnityEvent onPlayerStopDoor;
-    [SerializeField] public UnityEvent onPlayerGo;
-    [SerializeField] public UnityEvent onPlayerGoDoor;
+    private Animator animator;
+
+
+    private bool moving = true;
+    public bool isGrounded = true;
+
+
+    public float horizontalSpeed = 10f;
+    private float jumpingPower = 30f;
+
+    private bool facingLeft = false;
+    public bool turningEnabled = false;
+
+
+
 
     void Start()
     {
-        animator = gameObject.GetComponent<Animator>();
-        animator.SetFloat("Horizontal", horizontal);
+        startMoving();
+        animator = GetComponent<Animator>();
+        animator.SetFloat("Horizontal", horizontalSpeed);
+    }
+
+    public void startMoving()
+    {
+        moving = true;
+
+
+    }
+
+    public void stopMoving()
+    {
+        moving = false;
+        rb.velocity = new Vector2(0f, rb.velocity.y);
+
     }
 
     void Update()
     {
+        updateStatus();
+        handleInput();
+        updateAnimator();
+        animate();
 
+    }
+
+    private void animate()
+    {
+        if (turningEnabled) 
+        {
+            if (facingLeft && horizontalSpeed > 0) facingLeft = false;
+            else if (!facingLeft && horizontalSpeed < 0) facingLeft = true;
+
+            GetComponent<SpriteRenderer>().flipX = facingLeft;
+        }
+        
+    }
+
+    private void updateAnimator()
+    {
+        animator.SetFloat("SpeedV", rb.velocity.y);
+        animator.SetFloat("SpeedH", rb.velocity.x);
+        animator.SetBool("Moving", moving);
+        animator.SetBool("IsGrounded", isGrounded);
+
+    }
+
+    private void updateStatus()
+    {
+        if (checkIfDead())
+        {
+            die();
+        }
+    }
+
+    private void die()
+    {
+        SceneManager.LoadScene("GameOverDoors");
+    }
+
+    private bool checkIfDead()
+    {
+        //checks if touching death Zone
+        return Physics2D.OverlapCircle(groundCheck.position, 0.4f, deathLayer);
+    }
+ 
+
+    private void handleInput()
+    {
+        handleJump();
+    }
+
+    private void handleJump()
+    {
+        //if on the ground and jump, then jump
         if (Input.GetButtonDown("Jump") && isGrounded)
         {
             rb.velocity = new Vector2(rb.velocity.x, jumpingPower);
-            animator.SetBool("isJumping", true);
+            rb.AddRelativeForce(new Vector2(0f, 10f));
         }
-
-        if (Input.GetButtonUp("Jump") && rb.velocity.y > 0f)
+        //start falling if button is released
+        else if (Input.GetButtonUp("Jump") && !isGrounded && rb.velocity.y > 0f)
         {
-            rb.velocity = new Vector2(rb.velocity.x, rb.velocity.y * 0.5f);
-            animator.SetBool("isJumping", false);
+            rb.velocity = new Vector2(rb.velocity.x, rb.velocity.y * 0.5f * Time.deltaTime);
         }
-
-        //https://www.youtube.com/watch?v=55bdhtQzzSA
-        int layermask = 1 << 5;
-        layermask = -layermask;
-        //Vector2 rayOrigin = new Vector3(transform.position.x + 100f, transform.position.y - 20f, 0);
-        RaycastHit2D hitRight = Physics2D.Raycast(transform.position, transform.right, rayDistance, layermask); //origin, direction, distance
-        Debug.Log($"raycast: enter {runEventOnceOnCollisionEnter}, exit {runEventOnceOnCollisionExit}");
-        if (hitRight.collider != null)
-        {
-            Debug.Log($"collider hit: {hitRight.collider.name}");
-            if (runEventOnceOnCollisionEnter)
-            {
-                onPlayerStop?.Invoke();
-                runEventOnceOnCollisionEnter = false;
-                runEventOnceOnCollisionExit = true;
-                Debug.Log($"coll enter: enter {runEventOnceOnCollisionEnter}, exit {runEventOnceOnCollisionExit}");
-            }
-        }
-        else
-        {
-            if (runEventOnceOnCollisionExit)
-            {
-                onPlayerGo?.Invoke();
-                runEventOnceOnCollisionExit = false;
-                runEventOnceOnCollisionEnter = true;
-                Debug.Log($"coll exit: enter {runEventOnceOnCollisionEnter}, exit {runEventOnceOnCollisionExit}");
-            }
-        }
-        Debug.DrawRay(transform.position, transform.right * rayDistance, Color.red);
-
     }
+
 
     private void FixedUpdate()
     {
-        
-        rb.velocity = new Vector2(animator.GetFloat("Horizontal"), rb.velocity.y);
-        isGrounded = checkGrounded();
+        if (moving)
+        {
+            rb.velocity = new Vector2(horizontalSpeed, rb.velocity.y);
 
+        }
+        isGrounded = checkIfGrounded();
         
     }
 
-    private bool checkGrounded()
+    private bool checkIfGrounded()
     {
         return Physics2D.OverlapCircle(groundCheck.position, 0.4f, groundLayer);
     }
 
-    public void playerGoOrStop()
+
+
+    public void toggleMoving()
     {
         var horizontal = animator.GetFloat("Horizontal");
         animator.SetFloat("Horizontal", horizontal > 0f ? 0f : 10f);

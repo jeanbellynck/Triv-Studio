@@ -8,7 +8,7 @@ public class Playermvnt : MonoBehaviour
     public float speed = 10f;
     private float jumpingPower = 30f;
     public bool isGrounded = true;
-    public UnityEngine.Animator animator;
+    public Animator animator;
 
     public float rayDistance;
     private bool runEventOnceOnCollisionEnter = true;
@@ -23,7 +23,7 @@ public class Playermvnt : MonoBehaviour
 
     void Start()
     {
-        animator = GetComponent<UnityEngine.Animator>();
+        animator = GetComponent<Animator>();
     }
 
     void Update()
@@ -80,7 +80,7 @@ public class Playermvnt : MonoBehaviour
         return Physics2D.OverlapCircle(groundCheck.position, 0.2f, groundLayer);
     }
 
-    public void playerGoOrStop()
+    public void toggleRunning()
     {
         speed = speed > 0f ? 0f : 10f;
     }

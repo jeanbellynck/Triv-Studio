@@ -23,10 +23,17 @@ public class paralaxController : MonoBehaviour
 
     [Range(0.0025f, 0.01f)]
     public float parallaxSpeed;
+    public bool fitSitzeToCam = true;
 
 
     void Start()
     {
+
+        if (fitSitzeToCam)
+        {
+            transform.localScale = Vector3.one * (Camera.main.orthographicSize/9f); 
+        }
+
         cam = Camera.main.transform;
         camStartPos = cam.position;
 

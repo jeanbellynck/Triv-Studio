@@ -2,15 +2,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class simple2dMovement : MonoBehaviour
+public class anim_simple2dMovement : MonoBehaviour
 {
     private Animator animator;
     private bool facingLeft;
-    public PlayerMovement playerMovementScript;
-
     void Start()
     {
-        animator = GetComponent<Animator>();
+        animator = gameObject.GetComponent<Animator>();
         facingLeft = false;
     }
 

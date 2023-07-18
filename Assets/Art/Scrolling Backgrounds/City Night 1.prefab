@@ -26,7 +26,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 950573335310916479}
   m_LocalRotation: {x: 0.008638694, y: -0.707054, z: 0.707054, w: 0.008638694}
-  m_LocalPosition: {x: 0, y: 0, z: 0.66}
+  m_LocalPosition: {x: 0, y: 0, z: 0.87}
   m_LocalScale: {x: 1.6796079, y: 0, z: 0.959264}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -10241,6 +10241,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   parallaxSpeed: 0.01
+  fitSitzeToCam: 1
 --- !u!1 &8888993349026666002
 GameObject:
   m_ObjectHideFlags: 0

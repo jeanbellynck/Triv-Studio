@@ -10,19 +10,17 @@ namespace Levels
     /// </summary>
     public sealed class LevelGenerator : MonoBehaviour
     {
-        [SerializeField]
-        private GameObject _startSegment;
-
-        [SerializeField]
-        private Vector3 _startSegmentPosition;
+        [SerializeField] private GameObject _startSegment;
+        [SerializeField] private Vector3 _startSegmentPosition;
 
         [Tooltip("List of segments that get randomly spawned")]
-        [SerializeField] 
-        private List<GameObject> _segments = new();
+        [SerializeField] private List<GameObject> _segments = new();
 
         [Tooltip("Visible gap between two spawned segments")]
-        [SerializeField]
-        private float _segmentXOffset;
+        [SerializeField] private float _segmentXOffset;
+
+        [SerializeField] private float upperSpawnLimit = 1000f;
+        [SerializeField] private float lowerSpawnLimit = -10f;
 
         private Vector3 _lastSpawnPosition;
         private Vector3 _lastEndPosition;
@@ -72,9 +70,26 @@ namespace Levels
 
         private void SpawnRandomSegment()
         {
-            var index = Random.Range(0, _segments.Count);
-            var segment = _segments[index];
+            GameObject segment = null;
+            var tries = 0;
+            do {
+                segment = _segments[Random.Range(0, _segments.Count)];
+                tries++;
+                if ( 100 < tries) 
+                {
+                    throw new System.Exception();
+                }
+            } while (!checkIfSegmentIsOkay(segment));
+            
             SpawnSegment(segment);
+        }
+
+        private bool checkIfSegmentIsOkay(GameObject segment)
+        {
+            //checks if the new height is within bounds
+            var predictedEndPosition = _lastEndPosition.y + segment.transform.Find("EndPosition").transform.position.y;
+            return predictedEndPosition < upperSpawnLimit && lowerSpawnLimit < predictedEndPosition ;
+            
         }
 
         private void SpawnSegment(GameObject segment)
