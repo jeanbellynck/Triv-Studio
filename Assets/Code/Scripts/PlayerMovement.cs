@@ -18,7 +18,9 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private LayerMask groundLayer;
 
     [SerializeField] public UnityEvent onPlayerStop;
+    [SerializeField] public UnityEvent onPlayerStopDoor;
     [SerializeField] public UnityEvent onPlayerGo;
+    [SerializeField] public UnityEvent onPlayerGoDoor;
 
     void Start()
     {
@@ -40,27 +42,22 @@ public class PlayerMovement : MonoBehaviour
             rb.velocity = new Vector2(rb.velocity.x, rb.velocity.y * 0.5f);
             animator.SetBool("isJumping", false);
         }
-       
-    }
-
-    private void FixedUpdate()
-    {
-        
-        //horizontal = speed;
-        rb.velocity = new Vector2(animator.GetFloat("Horizontal"), rb.velocity.y);
-        isGrounded = checkGrounded();
 
         //https://www.youtube.com/watch?v=55bdhtQzzSA
         int layermask = 1 << 5;
         layermask = -layermask;
-        RaycastHit2D hitRight = Physics2D.Raycast(transform.position, transform.right, rayDistance, layermask);
+        //Vector2 rayOrigin = new Vector3(transform.position.x + 100f, transform.position.y - 20f, 0);
+        RaycastHit2D hitRight = Physics2D.Raycast(transform.position, transform.right, rayDistance, layermask); //origin, direction, distance
+        Debug.Log($"raycast: enter {runEventOnceOnCollisionEnter}, exit {runEventOnceOnCollisionExit}");
         if (hitRight.collider != null)
         {
+            Debug.Log($"collider hit: {hitRight.collider.name}");
             if (runEventOnceOnCollisionEnter)
             {
                 onPlayerStop?.Invoke();
                 runEventOnceOnCollisionEnter = false;
                 runEventOnceOnCollisionExit = true;
+                Debug.Log($"coll enter: enter {runEventOnceOnCollisionEnter}, exit {runEventOnceOnCollisionExit}");
             }
         }
         else
@@ -70,10 +67,20 @@ public class PlayerMovement : MonoBehaviour
                 onPlayerGo?.Invoke();
                 runEventOnceOnCollisionExit = false;
                 runEventOnceOnCollisionEnter = true;
+                Debug.Log($"coll exit: enter {runEventOnceOnCollisionEnter}, exit {runEventOnceOnCollisionExit}");
             }
         }
-
         Debug.DrawRay(transform.position, transform.right * rayDistance, Color.red);
+
+    }
+
+    private void FixedUpdate()
+    {
+        
+        rb.velocity = new Vector2(animator.GetFloat("Horizontal"), rb.velocity.y);
+        isGrounded = checkGrounded();
+
+        
     }
 
     private bool checkGrounded()

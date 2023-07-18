@@ -16,7 +16,7 @@ public class GameObjectAppear : MonoBehaviour
     public void letObjectAppear()
     {
         target.SetActive(hidden);
-        Debug.Log("set active");
+        Debug.Log($"set active {target.name}");
     }
 
     public void letObjectDisappear()
