@@ -272,6 +272,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 325214997}
     m_Modifications:
+    - target: {fileID: 1726882939329110200, guid: 06c4d680f2de06149963a3df62f20339, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 61.799988
+      objectReference: {fileID: 0}
     - target: {fileID: 3983477322771572742, guid: 06c4d680f2de06149963a3df62f20339, type: 3}
       propertyPath: m_Camera
       value: 
@@ -704,10 +708,10 @@ Camera:
   m_LensShift: {x: 0, y: 0}
   m_NormalizedViewPortRect:
     serializedVersion: 2
-    x: 0
-    y: 0.29900333
-    width: 1.7927171
-    height: 1.7940199
+    x: 0.20765027
+    y: 0.20734344
+    width: 0.58287793
+    height: 0.5831534
   near clip plane: 0.3
   far clip plane: 1000
   field of view: 60
@@ -736,7 +740,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1146880663}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.6772442, y: -0.35353756, z: -10.012949}
+  m_LocalPosition: {x: 5.0228577, y: 2.8562424, z: -10.012949}
   m_LocalScale: {x: 2, y: 2, z: 2}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1155,6 +1159,10 @@ PrefabInstance:
       value: 0.1
       objectReference: {fileID: 0}
     - target: {fileID: 325851109524503196, guid: 3c93dbe0c7160004583600916bac7250, type: 3}
+      propertyPath: jumpingPower
+      value: 60
+      objectReference: {fileID: 0}
+    - target: {fileID: 325851109524503196, guid: 3c93dbe0c7160004583600916bac7250, type: 3}
       propertyPath: onPlayerGo.m_PersistentCalls.m_Calls.Array.size
       value: 1
       objectReference: {fileID: 0}
@@ -1254,6 +1262,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5373384067341657650, guid: 3c93dbe0c7160004583600916bac7250, type: 3}
+      propertyPath: m_Mass
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 5373384067341657650, guid: 3c93dbe0c7160004583600916bac7250, type: 3}
+      propertyPath: m_GravityScale
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 7447155841204393712, guid: 3c93dbe0c7160004583600916bac7250, type: 3}
       propertyPath: m_Name
       value: Player
@@ -1323,6 +1339,10 @@ PrefabInstance:
     - target: {fileID: 4538198142111602784, guid: a24877b31d6e4a940a70e70c571f1fc4, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7811477248891115055, guid: a24877b31d6e4a940a70e70c571f1fc4, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 61.799988
       objectReference: {fileID: 0}
     - target: {fileID: 7932398724803005157, guid: a24877b31d6e4a940a70e70c571f1fc4, type: 3}
       propertyPath: m_Name

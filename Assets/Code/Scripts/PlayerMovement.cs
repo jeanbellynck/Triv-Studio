@@ -5,7 +5,7 @@ using UnityEngine.EventSystems;
 public class PlayerMovement : MonoBehaviour
 {
     public float horizontal = 0f;
-    private float jumpingPower = 30f;
+    public float jumpingPower = 30f;
     public bool isGrounded = true;
     public Animator animator;
 
