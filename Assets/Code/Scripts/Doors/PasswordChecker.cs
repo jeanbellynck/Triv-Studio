@@ -39,6 +39,7 @@ public class PasswordChecker : MonoBehaviour
         if (playerMovementScript == null)
             playerMovementScript = FindAnyObjectByType<PlayerMovement>();
     }
+
     public void inputChecker()
     {
         if (inputSelected > 4)
@@ -53,12 +54,12 @@ public class PasswordChecker : MonoBehaviour
 
             selectInputField();
 
-            if(inputSelected > 4)
+            if (inputSelected > 4)
             {
                 playSoundScript.playCorrectGuessSound();
                 EventSystem.current.SetSelectedGameObject(null); //deselect input field
                 onCorrectInput?.Invoke();
-                playerMovementScript.Invoke("playerGoOrStop", 1);
+                playerMovementScript.animator.SetFloat("Horizontal", 10f);
                 inputSelected = 0;
             }
         }
@@ -66,7 +67,7 @@ public class PasswordChecker : MonoBehaviour
         {
             colors.selectedColor = errorRed;
             playSoundScript.playWrongGuessSound();
-            inputFieldManagerScript.inputs[inputSelected].text = ""; 
+            inputFieldManagerScript.inputs[inputSelected].text = "";
             selectInputField();
         }
         //set colors to new colors
@@ -74,7 +75,6 @@ public class PasswordChecker : MonoBehaviour
         //rerender the inputfield
         inputField.Rebuild(CanvasUpdate.PreRender);
     }
-
 
     void selectInputField()
     {
@@ -105,4 +105,3 @@ public class PasswordChecker : MonoBehaviour
         selectInputField();
     }
 }
-

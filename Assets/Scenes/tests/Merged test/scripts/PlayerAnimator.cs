@@ -1,16 +1,14 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
-public class Animator: MonoBehaviour
+public class PlayerAnimator: MonoBehaviour
 {
-    private UnityEngine.Animator animator;
+    private Animator animator;
     private bool facingLeft;
     public Playermvnt playerMovementScript;
 
     void Start()
     {
-        animator = GetComponent<UnityEngine.Animator>();
+        animator = GetComponent<Animator>();
         facingLeft = false;
     }
 

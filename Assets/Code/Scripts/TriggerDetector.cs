@@ -1,12 +1,8 @@
-
 using UnityEngine;
 using UnityEngine.Events;
 
 public class CollisionDetector : MonoBehaviour
 {
-    [SerializeField]
-    private string colliderScript;
-
     [SerializeField]
     private UnityEvent triggerEntered;
 
@@ -15,11 +11,19 @@ public class CollisionDetector : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        //if the game object has the script that is specified as the variable colliderScript
-        if (collision.gameObject.GetComponent(colliderScript))
+        if (collision.gameObject.tag == "Player")
         {
-            triggerEntered?.Invoke();
+            triggerEntered.Invoke();
+            collision.gameObject.GetComponent<UnityEngine.Animator>().SetFloat("Horizontal", 0);
         }
     }
 
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        if (collision.gameObject.tag == "Player")
+        {
+            triggerExit.Invoke();
+            collision.gameObject.GetComponent<UnityEngine.Animator>().SetFloat("Horizontal", 10f);
+        }
+    }
 }

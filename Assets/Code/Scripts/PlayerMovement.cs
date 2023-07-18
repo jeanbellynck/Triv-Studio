@@ -5,10 +5,9 @@ using UnityEngine.EventSystems;
 public class PlayerMovement : MonoBehaviour
 {
     public float horizontal = 0f;
-    public float speed = 10f;
     private float jumpingPower = 30f;
     public bool isGrounded = true;
-    public UnityEngine.Animator animator;
+    public Animator animator;
 
     public float rayDistance;
     private bool runEventOnceOnCollisionEnter = true;
@@ -23,12 +22,12 @@ public class PlayerMovement : MonoBehaviour
 
     void Start()
     {
-        animator = GetComponent<UnityEngine.Animator>();
+        animator = gameObject.GetComponent<Animator>();
+        animator.SetFloat("Horizontal", horizontal);
     }
 
     void Update()
     {
-        horizontal = speed;
 
         if (Input.GetButtonDown("Jump") && isGrounded)
         {
@@ -41,11 +40,14 @@ public class PlayerMovement : MonoBehaviour
             rb.velocity = new Vector2(rb.velocity.x, rb.velocity.y * 0.5f);
             animator.SetBool("isJumping", false);
         }
+       
     }
 
     private void FixedUpdate()
     {
-        rb.velocity = new Vector2(speed, rb.velocity.y);
+        
+        //horizontal = speed;
+        rb.velocity = new Vector2(animator.GetFloat("Horizontal"), rb.velocity.y);
         isGrounded = checkGrounded();
 
         //https://www.youtube.com/watch?v=55bdhtQzzSA
@@ -81,6 +83,7 @@ public class PlayerMovement : MonoBehaviour
 
     public void playerGoOrStop()
     {
-        speed = speed > 0f ? 0f : 10f;
+        var horizontal = animator.GetFloat("Horizontal");
+        animator.SetFloat("Horizontal", horizontal > 0f ? 0f : 10f);
     }
 }

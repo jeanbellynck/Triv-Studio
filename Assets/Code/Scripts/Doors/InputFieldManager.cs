@@ -20,7 +20,7 @@ public class InputFieldManager : MonoBehaviour
         for (int i = 0; i < inputs.Length; i++)
         {
             inputs[i].placeholder.GetComponent<TextMeshProUGUI>().text = correctPassword.Substring(i, 1);
-            Debug.Log("placeholder: round " + i + " | " + correctPassword.Substring(i, 1));
+            //Debug.Log("placeholder: round " + i + " | " + correctPassword.Substring(i, 1));
         }
 
 
