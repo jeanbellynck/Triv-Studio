@@ -548,7 +548,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 6139140759711572279, guid: 79b7727497d711245a2c9d9508c7bd7b, type: 3}
       propertyPath: gravity
-      value: 10
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 6139140759711572279, guid: 79b7727497d711245a2c9d9508c7bd7b, type: 3}
       propertyPath: jumpForce
@@ -560,7 +560,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6139140759711572279, guid: 79b7727497d711245a2c9d9508c7bd7b, type: 3}
       propertyPath: jumpingHoldMultiplicator
-      value: 6
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 8085820609415272970, guid: 79b7727497d711245a2c9d9508c7bd7b, type: 3}
       propertyPath: m_RootOrder
@@ -1234,11 +1234,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6557350579671896594, guid: 19e6ba24e39f1c341a86e5608c2a128c, type: 3}
       propertyPath: lowerLimit
-      value: -55
+      value: -6
       objectReference: {fileID: 0}
     - target: {fileID: 6557350579671896594, guid: 19e6ba24e39f1c341a86e5608c2a128c, type: 3}
       propertyPath: verticalDisplacement
-      value: -3
+      value: -8.81
       objectReference: {fileID: 0}
     - target: {fileID: 7930764434783090515, guid: 19e6ba24e39f1c341a86e5608c2a128c, type: 3}
       propertyPath: m_LocalScale.x
