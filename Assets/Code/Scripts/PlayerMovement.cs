@@ -85,7 +85,7 @@ public class PlayerMovement : MonoBehaviour
     private bool checkIfDead()
     {
         //checks if touching death Zone
-        return Physics2D.OverlapBox(groundCheck.transform.position, groundedBoxSize, 0f, deathLayer);
+        return Physics2D.OverlapBox(groundCheck.transform.position, groundedBoxSize, 0f, deathLayer) || transform.position.y < -60;
     }
 
     // handles what happens when the player dies

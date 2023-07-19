@@ -64,10 +64,10 @@ namespace Levels
 
         private bool CanSpawnRandomSegment() 
         {
-            var x1 = Camera.main.transform.position.x + _halfCameraWidth*2;
+            var x1 = Camera.main.transform.position.x + _halfCameraWidth;
             var x2 = _lastSpawnPosition.x;
 
-            return Mathf.Abs(x2 - x1) < _currentSegmentWidth;
+            return x2 - x1 < _currentSegmentWidth + 3;
         }
 
         private void SpawnRandomSegment()

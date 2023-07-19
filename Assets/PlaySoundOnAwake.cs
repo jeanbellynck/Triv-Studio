@@ -7,7 +7,7 @@ public class PlaySoundOnAwake : MonoBehaviour
 
     [SerializeField] private string soundname;
     // Start is called before the first frame update
-    private void Awake()
+    private void Start()
     {
         if (soundname != null) FindObjectOfType<AudioManager>().Play(soundname);
     }

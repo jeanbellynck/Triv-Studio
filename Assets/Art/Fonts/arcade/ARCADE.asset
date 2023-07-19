@@ -60,9 +60,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 71c1514a6bd24e1e882cebbe1904ce04, type: 3}
   m_Name: ARCADE
   m_EditorClassIdentifier: 
-  hashCode: 0
+  hashCode: -1803593264
   material: {fileID: -8359676411773000323}
-  materialHashCode: 0
+  materialHashCode: -755981328
   m_Version: 1.1.0
   m_SourceFontFileGUID: 2a7675582dcabd24abc3c71b807d3d6b
   m_SourceFontFile_EditorRef: {fileID: 12800000, guid: 2a7675582dcabd24abc3c71b807d3d6b, type: 3}
