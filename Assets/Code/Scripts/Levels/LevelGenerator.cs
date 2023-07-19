@@ -62,7 +62,7 @@ namespace Levels
 
         private bool CanSpawnRandomSegment() 
         {
-            var x1 = Camera.main.transform.position.x + _halfCameraWidth;
+            var x1 = Camera.main.transform.position.x + _halfCameraWidth*2;
             var x2 = _lastSpawnPosition.x;
 
             return Mathf.Abs(x2 - x1) < _currentSegmentWidth;
@@ -77,7 +77,7 @@ namespace Levels
                 tries++;
                 if ( 100 < tries) 
                 {
-                    throw new System.Exception();
+                    throw new System.Exception;
                 }
             } while (!checkIfSegmentIsOkay(segment));
             
