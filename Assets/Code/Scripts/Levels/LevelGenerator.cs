@@ -20,7 +20,7 @@ namespace Levels
         [SerializeField] private float _segmentXOffset;
 
         [SerializeField] private float upperSpawnLimit = 1000f;
-        [SerializeField] private float lowerSpawnLimit = -10f;
+        [SerializeField] private float lowerSpawnLimit = -50f;
 
         private Vector3 _lastSpawnPosition;
         private Vector3 _lastEndPosition;
