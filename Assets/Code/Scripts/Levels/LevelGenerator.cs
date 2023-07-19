@@ -34,6 +34,8 @@ namespace Levels
             _lastSpawnPosition = _startSegmentPosition;
             _lastEndPosition = _startSegmentPosition + _startSegment.transform.Find(END_POSITION_NAME).transform.position;
             _halfCameraWidth = Camera.main.GetDimensions().Width / 2;
+
+           
         }
         
         private void Start()
@@ -77,7 +79,7 @@ namespace Levels
                 tries++;
                 if ( 100 < tries) 
                 {
-                    throw new System.Exception;
+                    throw new System.Exception();
                 }
             } while (!checkIfSegmentIsOkay(segment));
             

@@ -19,7 +19,7 @@ public class PasswordChecker : MonoBehaviour
     CanvasAppear canvasScript;
 
     [SerializeField]
-    PlaySound playSoundScript;
+    PlayDoorSound playSoundScript;
 
     [SerializeField]
     PlayerMovement playerMovementScript;
@@ -35,7 +35,7 @@ public class PasswordChecker : MonoBehaviour
     {
         //since the prefabs don't allow to reference other scene objects that aren't prefabs themselves, these references have to be added on runtime
         if (playSoundScript == null)
-            playSoundScript = FindAnyObjectByType<PlaySound>();
+            playSoundScript = FindAnyObjectByType<PlayDoorSound>();
 
         if (playerMovementScript == null)
             playerMovementScript = FindAnyObjectByType<PlayerMovement>();
