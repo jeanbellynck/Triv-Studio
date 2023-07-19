@@ -60,7 +60,7 @@ public class PasswordChecker : MonoBehaviour
                 playSoundScript.playCorrectGuessSound();
                 EventSystem.current.SetSelectedGameObject(null); //deselect input field
                 onCorrectInput?.Invoke();
-                playerMovementScript.startMoving();
+                playerMovementScript.setMoving(true);
                 inputSelected = 0;
             }
         }

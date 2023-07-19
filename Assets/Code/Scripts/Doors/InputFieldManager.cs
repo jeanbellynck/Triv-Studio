@@ -24,7 +24,7 @@ public class InputFieldManager : MonoBehaviour
         }
 
 
-        this.GetComponent<Canvas>().worldCamera = Camera.main;
+        GetComponent<Canvas>().worldCamera = Camera.main;
     }
 
     public void selectFirstInput()

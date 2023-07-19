@@ -189,6 +189,8 @@ MonoBehaviour:
   followMe: {fileID: 6944255367483831205}
   lowerLimit: 0
   upperLimit: 1000
+  verticalDisplacement: 5
+  horizontalDisplacement: 0
   touchingDeathZone: 0
 --- !u!1 &5252763671418031711
 GameObject:
@@ -375,10 +377,10 @@ Camera:
   m_LensShift: {x: 0, y: 0}
   m_NormalizedViewPortRect:
     serializedVersion: 2
-    x: 0.10253807
-    y: 0.47833934
-    width: 0.3248731
-    height: 0.32490975
+    x: 0
+    y: 0
+    width: 1
+    height: 1
   near clip plane: 0.3
   far clip plane: 1000
   field of view: 60

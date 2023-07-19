@@ -14,7 +14,7 @@ public class CollisionDetector : MonoBehaviour
         if (collision.gameObject.tag == "Player")
         {
             triggerEntered.Invoke();
-            collision.gameObject.GetComponent<Animator>().SetFloat("Horizontal", 0);
+            collision.gameObject.GetComponent<PlayerMovement>().setMoving(false);
         }
     }
 
@@ -23,7 +23,7 @@ public class CollisionDetector : MonoBehaviour
         if (collision.gameObject.tag == "Player")
         {
             triggerExit.Invoke();
-            collision.gameObject.GetComponent<Animator>().SetFloat("Horizontal", 10f);
+            collision.gameObject.GetComponent<PlayerMovement>().setMoving(true);
         }
     }
 }

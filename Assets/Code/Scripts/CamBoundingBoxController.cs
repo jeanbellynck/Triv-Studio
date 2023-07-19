@@ -15,7 +15,7 @@ public class CamBoundingBoxController : MonoBehaviour
     private GameObject followMe;
 
     [SerializeField]
-    private float lowerLimit = 0f;
+    private float lowerLimit = -10f;
     [SerializeField]
     private float upperLimit = 1000f;
     [SerializeField]
@@ -29,34 +29,38 @@ public class CamBoundingBoxController : MonoBehaviour
     private Vector3 followPos;
 
 
+
     // Start is called before the first frame update
     void Start()
     {
         followPos = followMe.transform.position;
         newPos = followPos;
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        followPos = followMe.transform.position;
+        followPos = followMe.transform.position - new Vector3(horizontalDisplacement, verticalDisplacement, 0);
         followHorizontal();
         followVertical();
-
-
         updatePos();
     }
 
     private void updatePos()
     {
-        //newPos += new Vector3(horizontalDisplacement ,verticalDisplacement,0);
+        
         transform.position = newPos;
     }
 
     private void followVertical()
     {
 
-        if (!canMoveVertical()) return;
+        if (!canMoveVertical()) {
+            newPos.y = transform.position.y;
+            return;
+
+        }
         checkIfTouchingDeathZone();
         if (touchingDeathZone)
         {

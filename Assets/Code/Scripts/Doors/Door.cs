@@ -4,12 +4,12 @@ using UnityEngine;
 
 public class Door : MonoBehaviour  
 {
-    private UnityEngine.Animator animator;
+    private Animator animator;
 
     //inspired by https://www.youtube.com/watch?v=1IJmenD1HOk
     private void Awake()
     {
-        animator = GetComponent<UnityEngine.Animator>();
+        animator = GetComponent<Animator>();
     }
 
     //to test easier, you can call the trigger directly from the inspector
