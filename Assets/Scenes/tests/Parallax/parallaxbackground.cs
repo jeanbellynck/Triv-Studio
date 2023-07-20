@@ -9,6 +9,7 @@ public class parallaxBackground : MonoBehaviour
 
     [Range(0f, 0.5f)]
     public float speed = 0.2f;
+    public Vector2 direction = Vector2.right;
 
     // Start is called before the first frame update
     void Start()
@@ -20,7 +21,7 @@ public class parallaxBackground : MonoBehaviour
     void Update()
     {
         distance += Time.deltaTime*speed;
-        mat.SetTextureOffset("_MainTex", Vector2.right * distance);
+        mat.SetTextureOffset("_MainTex", direction * distance);
 
 
     }

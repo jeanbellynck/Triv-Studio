@@ -198,6 +198,30 @@ PrefabInstance:
       propertyPath: m_Name
       value: TimerDoors
       objectReference: {fileID: 0}
+    - target: {fileID: 6476628123122144498, guid: 06c4d680f2de06149963a3df62f20339, type: 3}
+      propertyPath: m_fontSize
+      value: 13
+      objectReference: {fileID: 0}
+    - target: {fileID: 6476628123122144498, guid: 06c4d680f2de06149963a3df62f20339, type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: dc36b3fdc14f47ebb36fd484a67e268a, type: 2}
+    - target: {fileID: 6476628123122144498, guid: 06c4d680f2de06149963a3df62f20339, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 13
+      objectReference: {fileID: 0}
+    - target: {fileID: 6476628123122144498, guid: 06c4d680f2de06149963a3df62f20339, type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: 2140032, guid: dc36b3fdc14f47ebb36fd484a67e268a, type: 2}
+    - target: {fileID: 6476628123122144498, guid: 06c4d680f2de06149963a3df62f20339, type: 3}
+      propertyPath: m_VerticalAlignment
+      value: 4096
+      objectReference: {fileID: 0}
+    - target: {fileID: 6476628123122144498, guid: 06c4d680f2de06149963a3df62f20339, type: 3}
+      propertyPath: m_hasFontAssetChanged
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7643797469959084228, guid: 06c4d680f2de06149963a3df62f20339, type: 3}
       propertyPath: m_RootOrder
       value: -1
@@ -382,7 +406,7 @@ Canvas:
   m_OverrideSorting: 0
   m_OverridePixelPerfect: 0
   m_SortingBucketNormalizedSize: 0
-  m_VertexColorAlwaysGammaSpace: 0
+  m_VertexColorAlwaysGammaSpace: 1
   m_AdditionalShaderChannelsFlag: 25
   m_UpdateRectTransformForStandalone: 0
   m_SortingLayerID: 0
@@ -463,8 +487,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: 'Score: '
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: dc36b3fdc14f47ebb36fd484a67e268a, type: 2}
+  m_sharedMaterial: {fileID: 2140032, guid: dc36b3fdc14f47ebb36fd484a67e268a, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -1185,6 +1209,30 @@ PrefabInstance:
       propertyPath: m_Camera
       value: 
       objectReference: {fileID: 1146880668}
+    - target: {fileID: 1792427920707191267, guid: a24877b31d6e4a940a70e70c571f1fc4, type: 3}
+      propertyPath: m_fontSize
+      value: 13
+      objectReference: {fileID: 0}
+    - target: {fileID: 1792427920707191267, guid: a24877b31d6e4a940a70e70c571f1fc4, type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: dc36b3fdc14f47ebb36fd484a67e268a, type: 2}
+    - target: {fileID: 1792427920707191267, guid: a24877b31d6e4a940a70e70c571f1fc4, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 13
+      objectReference: {fileID: 0}
+    - target: {fileID: 1792427920707191267, guid: a24877b31d6e4a940a70e70c571f1fc4, type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: 2140032, guid: dc36b3fdc14f47ebb36fd484a67e268a, type: 2}
+    - target: {fileID: 1792427920707191267, guid: a24877b31d6e4a940a70e70c571f1fc4, type: 3}
+      propertyPath: m_VerticalAlignment
+      value: 4096
+      objectReference: {fileID: 0}
+    - target: {fileID: 1792427920707191267, guid: a24877b31d6e4a940a70e70c571f1fc4, type: 3}
+      propertyPath: m_hasFontAssetChanged
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4538198142111602784, guid: a24877b31d6e4a940a70e70c571f1fc4, type: 3}
       propertyPath: m_RootOrder
       value: -1
@@ -1373,7 +1421,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1334170954648173499, guid: 19e6ba24e39f1c341a86e5608c2a128c, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 40.670185
+      value: 44
       objectReference: {fileID: 0}
     - target: {fileID: 1334170954648173499, guid: 19e6ba24e39f1c341a86e5608c2a128c, type: 3}
       propertyPath: m_LocalPosition.y
