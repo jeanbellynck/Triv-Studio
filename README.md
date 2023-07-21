@@ -31,6 +31,6 @@ The most important files can be found in the following folders:
 ## 🧑‍💻 Authors
 - David Penn
 - Agata Kim
-- Jean
-- Angel Ontung
+- Jean Bellynck
+- Angel Tung
 - Annalisa Comin 
