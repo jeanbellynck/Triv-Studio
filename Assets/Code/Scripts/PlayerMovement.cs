@@ -44,7 +44,8 @@ public class PlayerMovement : MonoBehaviour
     public bool jumping = false;
     public bool isGrounded = false;
     private bool facingLeft = false;
-    public bool turningEnabled = false;    
+    public bool turningEnabled = false;
+    public bool statusDeath = false;
 
 
 
@@ -87,10 +88,21 @@ public class PlayerMovement : MonoBehaviour
         //checks if touching death Zone
         return Physics2D.OverlapBox(groundCheck.transform.position, groundedBoxSize, 0f, deathLayer) || transform.position.y < -60;
     }
-
-    // handles what happens when the player dies
-    private void die()
+    public void die()
     {
+        setMoving(false);
+        transform.rotation = Quaternion.Euler(0f, 0f, -90f);
+        statusDeath = true;
+        StartCoroutine(dieCor());
+
+    }
+    // handles what happens when the player dies
+    private IEnumerator dieCor()
+    {
+        
+
+        yield return new WaitForSeconds(2);
+
         SceneManager.LoadScene("GameOverDoors");
     }
 

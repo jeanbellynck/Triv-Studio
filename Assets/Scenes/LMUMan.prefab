@@ -320,6 +320,7 @@ MonoBehaviour:
   jumping: 0
   isGrounded: 1
   turningEnabled: 0
+  statusDeath: 0
 --- !u!114 &7503326249539724086
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -360,3 +361,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5677e2409bfff9c48974f90076e15d17, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  deathSound: {fileID: 1955186300115752081, guid: 4fc4bec9853a8844aa34ad93eb2ec7bf, type: 3}

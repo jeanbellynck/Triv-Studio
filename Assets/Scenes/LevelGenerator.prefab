@@ -1,0 +1,77 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &4820454675491027116
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 47548600376952462}
+  - component: {fileID: 1065104182397479898}
+  - component: {fileID: 5267833605362376745}
+  m_Layer: 0
+  m_Name: LevelGenerator
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &47548600376952462
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4820454675491027116}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -40, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1065104182397479898
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4820454675491027116}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 12145f502bca1c441a3de6cc613610c8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _startSegment: {fileID: 4598796320522703608, guid: dae75e76a7b62d9479f55e9ebdcf116f, type: 3}
+  _startSegmentPosition: {x: -27.6, y: 0, z: 0}
+  _segments:
+  - {fileID: 4598796320522703608, guid: 2acf151e624aad94fa13d61574637c9c, type: 3}
+  - {fileID: 4598796320522703608, guid: 330b3bbbe410aae47bbe792e951413c9, type: 3}
+  - {fileID: 4598796320522703608, guid: ba1832bce6512a64d948b4a1eed99c0b, type: 3}
+  - {fileID: 4598796320522703608, guid: fd594fb49cc84f44d820fd46ba4232ad, type: 3}
+  - {fileID: 4598796320522703608, guid: 8d48990a6a6d9f149ae38960d00f1782, type: 3}
+  _segmentXOffset: 21
+  upperSpawnLimit: 1000
+  lowerSpawnLimit: -50
+  spawnEnemies: 1
+  spawnEnemyScript: {fileID: 0}
+--- !u!114 &5267833605362376745
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4820454675491027116}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 38c5ea6373cef3a47808f8929eddd8c3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemy: {fileID: 6443289321471262321, guid: f4582ad7b7220b9498e423bb7e6691f5, type: 3}
+  spawnLikelyhood: 0.392
+  spawnVectors:
+  - {x: 1, y: 6, z: 0}
+  - {x: 10, y: 7.5, z: 0}

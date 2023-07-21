@@ -22,18 +22,34 @@ namespace Levels
         [SerializeField] private float upperSpawnLimit = 1000f;
         [SerializeField] private float lowerSpawnLimit = -50f;
 
+        [Space]
+        [Header("Variables")]
+        [Space]
+
         private Vector3 _lastSpawnPosition;
         private Vector3 _lastEndPosition;
         private float _halfCameraWidth;
         private float _currentSegmentWidth;
 
+
+        [Space]
+        [Header("EnemySpawner")]
+        [Space]
+        [SerializeField]
+        private bool spawnEnemies = true;
+        [SerializeField]
+        private SpawnEnemy spawnEnemyScript;
+
         private string END_POSITION_NAME = "EndPosition";
+
+        
 
         private void Awake()
         {
             _lastSpawnPosition = _startSegmentPosition;
             _lastEndPosition = _startSegmentPosition + _startSegment.transform.Find(END_POSITION_NAME).transform.position;
             _halfCameraWidth = Camera.main.GetDimensions().Width / 2;
+            spawnEnemies = false;
 
            
         }
@@ -41,6 +57,7 @@ namespace Levels
         private void Start()
         {
             InitializeSegments();
+            spawnEnemies = true;
         }
         
         private void Update()
@@ -72,18 +89,31 @@ namespace Levels
 
         private void SpawnRandomSegment()
         {
-            GameObject segment = null;
+            GameObject prefabSegment = null;
             var tries = 0;
             do {
-                segment = _segments[Random.Range(0, _segments.Count)];
+                prefabSegment = _segments[Random.Range(0, _segments.Count)];
                 tries++;
                 if ( 100 < tries) 
                 {
                     throw new System.Exception();
                 }
-            } while (!checkIfSegmentIsOkay(segment));
+            } while (!checkIfSegmentIsOkay(prefabSegment));
             
-            SpawnSegment(segment);
+            GameObject segment = spawnSegment(prefabSegment);
+            spawnEnemy(segment);
+        }
+
+        private void spawnEnemy(GameObject parent)
+        {
+            if(spawnEnemies && spawnEnemyScript != null)
+            {
+                Vector3 relativePosition = spawnEnemyScript.spawnVectors[Random.Range(0, spawnEnemyScript.spawnVectors.Count)];
+                relativePosition = relativePosition != null ? relativePosition : new Vector3(18, 7, 0);
+
+
+                spawnEnemyScript.maybeSpawnEnemyEvent(relativePosition, parent);
+            }
         }
 
         private bool checkIfSegmentIsOkay(GameObject segment)
@@ -94,7 +124,7 @@ namespace Levels
             
         }
 
-        private void SpawnSegment(GameObject segment)
+        private GameObject spawnSegment(GameObject segment)
         {
             // determine new Spawn Position
             //Vector3 newSpawnPosition = _lastSpawnPosition + new Vector3(_currentSegmentWidth + _segmentXOffset, 0, 0);
@@ -107,6 +137,8 @@ namespace Levels
             _lastSpawnPosition = spawnedSegment.transform.position;
             _currentSegmentWidth = spawnedSegment.GetComponent<SegmentDescriptor>().SegmentWidth;
             _lastEndPosition = spawnedSegment.transform.Find(END_POSITION_NAME).transform.position;
+
+            return spawnedSegment;
         }
     }
 }

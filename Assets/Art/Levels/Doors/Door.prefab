@@ -1233,7 +1233,7 @@ MonoBehaviour:
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
   m_DynamicPixelsPerUnit: 1
-  m_PresetInfoIsWorld: 1
+  m_PresetInfoIsWorld: 0
 --- !u!114 &2162871163936623978
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2856,7 +2856,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.49, y: 2.6}
+  m_Offset: {x: -1.4, y: 3.72}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -2867,7 +2867,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 5.64, y: 18.04}
+  m_Size: {x: 5.64, y: 14.1}
   m_EdgeRadius: 0
 --- !u!114 &7374208175162182341
 MonoBehaviour:
@@ -3995,7 +3995,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1189013736096029243, guid: 06c4d680f2de06149963a3df62f20339, type: 3}
       propertyPath: m_PresetInfoIsWorld
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1726882939329110200, guid: 06c4d680f2de06149963a3df62f20339, type: 3}
       propertyPath: m_SizeDelta.x
@@ -4052,14 +4052,6 @@ PrefabInstance:
     - target: {fileID: 5635389633358366101, guid: 06c4d680f2de06149963a3df62f20339, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 30.62
-      objectReference: {fileID: 0}
-    - target: {fileID: 6476628123122144498, guid: 06c4d680f2de06149963a3df62f20339, type: 3}
-      propertyPath: m_fontSize
-      value: 1.1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6476628123122144498, guid: 06c4d680f2de06149963a3df62f20339, type: 3}
-      propertyPath: m_fontSizeBase
-      value: 1.1
       objectReference: {fileID: 0}
     - target: {fileID: 6973968513482978764, guid: 06c4d680f2de06149963a3df62f20339, type: 3}
       propertyPath: m_Pivot.x

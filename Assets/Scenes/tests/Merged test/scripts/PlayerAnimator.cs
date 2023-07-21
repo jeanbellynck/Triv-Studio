@@ -8,6 +8,7 @@ public class PlayerAnimator: MonoBehaviour
     private bool facingLeftOld = false;
     private PlayerMovement playerMovementScript;
     private Rigidbody2D rb;
+    public GameObject deathSound;
 
 
     void Start()
@@ -38,6 +39,10 @@ public class PlayerAnimator: MonoBehaviour
         {
             handleTurningFixed();
         }
+        if (playerMovementScript.statusDeath)
+        {
+            Instantiate(deathSound);
+        }
     }
 
     private void handleTurningFixed()
@@ -65,6 +70,7 @@ public class PlayerAnimator: MonoBehaviour
         animator.SetBool("Moving", playerMovementScript.moving);
         animator.SetBool("IsGrounded", playerMovementScript.isGrounded);
         animator.SetBool("Jumping", playerMovementScript.jumping);
+        animator.SetBool("IsDead", playerMovementScript.statusDeath);
 
     }
 }

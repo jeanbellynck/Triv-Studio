@@ -5,7 +5,7 @@ using UnityEngine;
 public class Bullet1 : MonoBehaviour
 {
 
-    public float speed = 20f;
+    public float speed = 5f;
     public Rigidbody2D rb;
     public float colissionRadius = 0.4f;
     public bool collided = false;
@@ -16,7 +16,7 @@ public class Bullet1 : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        rb.velocity = transform.right * speed + new Vector3(1, 0, 0) * speed;
+        rb.velocity = transform.right * speed;
     }
 
     // Update is called once per frame
@@ -31,8 +31,13 @@ public class Bullet1 : MonoBehaviour
         }
         Debug.Log(hitInfo.name);
 
+        GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerMovement>().die();
+
+
         Instantiate(explosion, transform.position, transform.rotation);
       
         Destroy(gameObject);
+
+        
     }
 }
