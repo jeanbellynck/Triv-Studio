@@ -103,7 +103,7 @@ public class PlayerMovement : MonoBehaviour
 
         yield return new WaitForSeconds(2);
 
-        SceneManager.LoadScene("GameOverDoors");
+        SceneManager.LoadScene("GameOver");
     }
 
 

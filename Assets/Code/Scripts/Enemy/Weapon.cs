@@ -19,6 +19,9 @@ public class Weapon : MonoBehaviour
     }
     void Update()
     {
+
+        
+
         timer += Time.deltaTime;
         if (timer > delay && player.GetComponent<PlayerMovement>().moving)
         {
@@ -31,14 +34,17 @@ public class Weapon : MonoBehaviour
     }
     void Shoot()
     {
+        if (shots >= 1)
+        {
+            Instantiate(explosion, transform.position, transform.rotation);
+            Destroy(gameObject);
+        }
+
         var position = FirePoint.position;
         position.z = 0;
         Instantiate(bulletPrefab, position, FirePoint.rotation);
         shots++;
-        if(shots > 2) {
-            Instantiate(explosion, transform.position, transform.rotation);
-            Destroy(gameObject);
-        }
+       
     }
 
 }
