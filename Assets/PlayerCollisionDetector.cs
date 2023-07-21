@@ -14,6 +14,7 @@ public class PlayerCollisionDetector : MonoBehaviour
     public float rayDistance;
     private bool firstCollisionEnterEvent = true;
     private bool firstCollisionExitEvent = false;
+    
     [SerializeField] private LayerMask affectedLayers;
 
     // Start is called before the first frame update
@@ -23,7 +24,7 @@ public class PlayerCollisionDetector : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
         checkCollisions();
 
