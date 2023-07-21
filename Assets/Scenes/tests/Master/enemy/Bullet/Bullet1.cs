@@ -24,20 +24,22 @@ public class Bullet1 : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D hitInfo)
     {
-        HPtracker Damager = hitInfo.GetComponent<HPtracker>();
-        if (Damager != null)
+        if (hitInfo.tag == "Player")
         {
-            Damager.TakeDamage(25);
+            HPtracker Damager = hitInfo.GetComponent<HPtracker>();
+            if (Damager != null)
+            {
+                Damager.TakeDamage(25);
+            }
+            Debug.Log(hitInfo.name);
+
+            GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerMovement>().die();
+
+
+            Instantiate(explosion, transform.position, transform.rotation);
+
+            Destroy(gameObject);
         }
-        Debug.Log(hitInfo.name);
-
-        GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerMovement>().die();
-
-
-        Instantiate(explosion, transform.position, transform.rotation);
-      
-        Destroy(gameObject);
-
         
     }
 }
