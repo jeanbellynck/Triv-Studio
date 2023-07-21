@@ -57,7 +57,7 @@ MonoBehaviour:
   upperSpawnLimit: 1000
   lowerSpawnLimit: -50
   spawnEnemies: 1
-  spawnEnemyScript: {fileID: 0}
+  spawnEnemyScript: {fileID: 5267833605362376745}
 --- !u!114 &5267833605362376745
 MonoBehaviour:
   m_ObjectHideFlags: 0

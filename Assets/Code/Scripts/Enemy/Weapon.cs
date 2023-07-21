@@ -37,7 +37,7 @@ public class Weapon : MonoBehaviour
         if (shots >= 1)
         {
             Instantiate(explosion, transform.position, transform.rotation);
-            Destroy(gameObject);
+            Destroy(transform.parent);
         }
 
         var position = FirePoint.position;

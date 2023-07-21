@@ -8,9 +8,6 @@ public class AudioManager : MonoBehaviour
 {
 
 	public static AudioManager instance;
-
-	public AudioMixerGroup mixerGroup;
-
 	public Sound[] sounds;
 
 	void Awake()
@@ -30,8 +27,9 @@ public class AudioManager : MonoBehaviour
 			s.source = gameObject.AddComponent<AudioSource>();
 			s.source.clip = s.clip;
 			s.source.loop = s.loop;
+			s.source.playOnAwake = false;
+			
 
-			s.source.outputAudioMixerGroup = mixerGroup;
 		}
 	}
 
@@ -47,7 +45,7 @@ public class AudioManager : MonoBehaviour
 		s.source.volume = s.volume; //* (1f + UnityEngine.Random.Range(-s.volumeVariance / 2f, s.volumeVariance / 2f));
 		s.source.pitch = s.pitch; //* (1f + UnityEngine.Random.Range(-s.pitchVariance / 2f, s.pitchVariance / 2f));
 
-		s.source.Play();
+		s.source.PlayDelayed(0.1f);
 		Debug.Log("Playing" + s.name);
 	}
 

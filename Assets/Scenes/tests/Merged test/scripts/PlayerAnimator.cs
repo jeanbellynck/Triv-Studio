@@ -41,7 +41,7 @@ public class PlayerAnimator: MonoBehaviour
         }
         if (playerMovementScript.statusDeath)
         {
-            Instantiate(deathSound);
+            Instantiate(deathSound, transform);
         }
     }
 

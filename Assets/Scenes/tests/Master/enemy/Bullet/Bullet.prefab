@@ -240,7 +240,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aac504caffb73d04eb6ccacf17ee10e9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 4.13
+  speed: 40
   rb: {fileID: 6114617993272761040}
   colissionRadius: 0.4
   collided: 0
