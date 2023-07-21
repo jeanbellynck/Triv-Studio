@@ -700,8 +700,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: 
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: dc36b3fdc14f47ebb36fd484a67e268a, type: 2}
-  m_sharedMaterial: {fileID: 2140032, guid: dc36b3fdc14f47ebb36fd484a67e268a, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -1077,8 +1077,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: "\u200B"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: dc36b3fdc14f47ebb36fd484a67e268a, type: 2}
-  m_sharedMaterial: {fileID: 2140032, guid: dc36b3fdc14f47ebb36fd484a67e268a, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -4178,12 +4178,20 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 3158153563273258248}
     m_Modifications:
+    - target: {fileID: 2844163015095220837, guid: 814b2f6056661ec4698ece1b61574b4d, type: 3}
+      propertyPath: m_SortingLayer
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5635524292593712515, guid: 814b2f6056661ec4698ece1b61574b4d, type: 3}
       propertyPath: m_Name
       value: DoorOpen
       objectReference: {fileID: 0}
     - target: {fileID: 5635524292593712515, guid: 814b2f6056661ec4698ece1b61574b4d, type: 3}
       propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5892113002973629291, guid: 814b2f6056661ec4698ece1b61574b4d, type: 3}
+      propertyPath: m_SortingLayer
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6284535626328036107, guid: 814b2f6056661ec4698ece1b61574b4d, type: 3}
@@ -4228,6 +4236,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6284535626328036107, guid: 814b2f6056661ec4698ece1b61574b4d, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7875362521279502633, guid: 814b2f6056661ec4698ece1b61574b4d, type: 3}
+      propertyPath: m_SortingLayer
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7901538895961455104, guid: 814b2f6056661ec4698ece1b61574b4d, type: 3}
