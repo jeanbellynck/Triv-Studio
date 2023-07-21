@@ -11,7 +11,7 @@ public class score : MonoBehaviour
     // Update is called once per frame, inspired by https://www.youtube.com/watch?v=TAGZxRMloyU
     void Update()
     {
-        int startX = 26;
+        int startX = 17;
         scoreText.text = "Score: " + ((player.position.x - startX)*0.25).ToString("0") + "m";
     }
 }
