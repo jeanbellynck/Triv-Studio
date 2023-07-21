@@ -8,6 +8,7 @@ public class Retry : MonoBehaviour
     {
         // Only specifying the sceneName or sceneBuildIndex will load the Scene with the Single mode
         //SceneManager.LoadScene("Level01");
+        Debug.Log("load game");
         SceneManager.LoadScene("Main");
     }
 
@@ -18,7 +19,8 @@ public class Retry : MonoBehaviour
 
     public void loadGameOver()
     {
-        SceneManager.LoadScene("GameOverDoors");
+        Debug.Log("load game over");
+        SceneManager.LoadScene("GameOver");
     }
 }
 
