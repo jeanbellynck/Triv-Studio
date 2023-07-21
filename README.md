@@ -33,9 +33,11 @@ The DestroySegment script is important for memory management. It is responsible 
 ### Doors
 Another core game mechanic are the doors with the passwords as passkeys. The passwords are randomly picked from a txt file and the words have to be 5 characters long. Every input gets checked if it is correct, if not the user has to type again until it is correct. In the meantime the timer starts, if you are too slow and you don't type the word correctly before timeout, it's game over. 
 
-Limitations:
+**Limitation or feature?**
+
 unfortunately there was a problem since some of the latest commits. Therefore the door is not functioning as it was supposed to anymore. 
-Sometimes, instead of one time, the player has to enter the password twice. 
+Sometimes, instead of one time, the player has to enter the password twice.
+But maybe it is the TUM overlords that interfered with the resistance and installed a double password to hinder the defenders of excellence to save the world from this technical tyranny!
 
 ## 📂 Assets Files Description
 The most important files can be found in the following folders:
